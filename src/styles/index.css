@@ -1,0 +1,16 @@
+@import url('theme.css');
+
+body {
+  background-color: var(--md-ref-palette-secondary98);
+  color: var(--md-ref-palette-secondary10);
+
+  font-family: 'ManropeVariable', sans-serif;
+  font-weight: 400;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--md-ref-palette-secondary10);
+    color: var(--md-ref-palette-secondary98);
+  }
+}
