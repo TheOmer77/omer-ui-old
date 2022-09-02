@@ -1,4 +1,13 @@
-import { ButtonHTMLAttributes, DetailedHTMLProps, forwardRef } from 'react';
+import {
+  ButtonHTMLAttributes,
+  cloneElement,
+  DetailedHTMLProps,
+  forwardRef,
+  HTMLAttributes,
+  isValidElement,
+  ReactElement,
+  ReactNode,
+} from 'react';
 import classNames from 'classnames';
 
 import classes from './index.module.css';
@@ -15,6 +24,8 @@ export interface ButtonProps
   color?: ButtonColor;
   variant?: ButtonVariant;
   size?: ButtonSize;
+  startIcon?: ReactNode;
+  endIcon?: ReactNode;
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
@@ -23,7 +34,10 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       color = 'neutral',
       variant = 'tonal',
       size = 'medium',
+      startIcon,
+      endIcon,
       className,
+      children,
       ...props
     },
     ref
@@ -47,7 +61,33 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           className
         )}
         {...props}
-      />
+      >
+        {isValidElement(startIcon) &&
+          cloneElement(
+            startIcon as ReactElement<
+              DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>
+            >,
+            {
+              className: classNames(
+                startIcon.props?.className,
+                classes['button-start-icon']
+              ),
+            }
+          )}
+        {children}
+        {isValidElement(endIcon) &&
+          cloneElement(
+            endIcon as ReactElement<
+              DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>
+            >,
+            {
+              className: classNames(
+                endIcon.props?.className,
+                classes['button-end-icon']
+              ),
+            }
+          )}
+      </button>
     );
   }
 );

@@ -7,6 +7,8 @@ declare const styles: {
   readonly "button-small": string;
   readonly "button-medium": string;
   readonly "button-large": string;
+  readonly "button-start-icon": string;
+  readonly "button-end-icon": string;
 };
 export = styles;
 

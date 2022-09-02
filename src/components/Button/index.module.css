@@ -5,6 +5,10 @@
   font-weight: 600;
   font-family: var(--md-sys-typescale-body-large-font-family-name);
 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
   transition-property: color, background-color;
   transition-duration: 150ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -199,4 +203,33 @@
   height: 2.5rem;
   padding: 0 1.25rem;
   font-size: 1.25rem;
+}
+
+/* ICON */
+.button-root.button-small .button-start-icon,
+.button-root.button-small .button-end-icon {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+.button-root.button-medium .button-start-icon,
+.button-root.button-medium .button-end-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.button-root.button-large .button-start-icon,
+.button-root.button-large .button-end-icon {
+  width: 1.325rem;
+  height: 1.325rem;
+}
+
+.button-root .button-start-icon,
+[dir='rtl'] .button-root .button-end-icon {
+  margin-right: 0.25rem;
+  margin-left: 0;
+}
+
+.button-root .button-end-icon,
+[dir='rtl'] .button-root .button-start-icon {
+  margin-left: 0.25rem;
+  margin-right: 0;
 }
