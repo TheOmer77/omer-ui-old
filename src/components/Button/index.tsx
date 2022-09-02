@@ -3,16 +3,22 @@ import classNames from 'classnames';
 
 import classes from './index.module.css';
 
-interface ButtonProps
+export type ButtonColor = 'primary' | 'neutral';
+export type ButtonVariant = 'tonal' | 'filled';
+export type ButtonSize = 'small' | 'medium' | 'large';
+
+export interface ButtonProps
   extends DetailedHTMLProps<
     ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
   > {
-  variant?: 'tonal' | 'filled';
-  size?: 'small' | 'medium' | 'large';
+  color?: ButtonColor;
+  variant?: ButtonVariant;
+  size?: ButtonSize;
 }
 
 const Button = ({
+  color = 'neutral',
   variant = 'tonal',
   size = 'medium',
   ...props
@@ -21,6 +27,9 @@ const Button = ({
     <button
       className={classNames(
         classes['button-root'],
+        color === 'primary'
+          ? classes['button-primary']
+          : classes['button-neutral'],
         variant === 'filled'
           ? classes['button-filled']
           : classes['button-tonal'],

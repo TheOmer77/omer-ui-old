@@ -1,32 +1,30 @@
-import Button from './components/Button';
+import Button, { ButtonColor, ButtonVariant } from './components/Button';
 
 import classes from './App.module.css';
+
+const buttonsDemo: [ButtonVariant, ButtonColor][] = [
+  ['tonal', 'neutral'],
+  ['tonal', 'primary'],
+  ['filled', 'neutral'],
+  ['filled', 'primary'],
+];
 
 const App = () => (
   <div>
     <div className={classes['demo-row']}>
-      <div className={classes['demo-column']}>
-        <Button variant='tonal' size='small'>
-          Button
-        </Button>
-        <Button variant='tonal' size='medium'>
-          Button
-        </Button>
-        <Button variant='tonal' size='large'>
-          Button
-        </Button>
-      </div>
-      <div className={classes['demo-column']}>
-        <Button variant='filled' size='small'>
-          Button
-        </Button>
-        <Button variant='filled' size='medium'>
-          Button
-        </Button>
-        <Button variant='filled' size='large'>
-          Button
-        </Button>
-      </div>
+      {buttonsDemo.map(([variant, color]) => (
+        <div key={`${variant}-${color}`} className={classes['demo-column']}>
+          <Button variant={variant} color={color} size='small'>
+            Button
+          </Button>
+          <Button variant={variant} color={color} size='medium'>
+            Button
+          </Button>
+          <Button variant={variant} color={color} size='large'>
+            Button
+          </Button>
+        </div>
+      ))}
     </div>
   </div>
 );
