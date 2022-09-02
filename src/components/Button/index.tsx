@@ -21,6 +21,7 @@ const Button = ({
   color = 'neutral',
   variant = 'tonal',
   size = 'medium',
+  className,
   ...props
 }: ButtonProps) => {
   return (
@@ -37,7 +38,8 @@ const Button = ({
           ? classes['button-small']
           : size === 'large'
           ? classes['button-large']
-          : classes['button-medium']
+          : classes['button-medium'],
+        className
       )}
       {...props}
     />
