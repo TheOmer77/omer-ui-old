@@ -23,6 +23,15 @@ const App = () => (
           <Button variant={variant} color={color} size='large'>
             Button
           </Button>
+          <Button variant={variant} color={color} size='small' disabled>
+            Button
+          </Button>
+          <Button variant={variant} color={color} size='medium' disabled>
+            Button
+          </Button>
+          <Button variant={variant} color={color} size='large' disabled>
+            Button
+          </Button>
         </div>
       ))}
     </div>
