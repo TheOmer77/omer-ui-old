@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { createRoot } from 'react-dom/client';
+import { useState } from 'react';
 
 // Components
 import Button, { ButtonColor, ButtonVariant } from 'components/Button';
@@ -116,8 +115,4 @@ const DemoApp = () => {
   );
 };
 
-createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <DemoApp />
-  </React.StrictMode>
-);
+export default DemoApp;
