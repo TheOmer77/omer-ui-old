@@ -12,7 +12,7 @@
 .button-root:focus-visible {
   outline: none;
 }
-.button-root:active {
+.button-root:active:not(:disabled) {
   transition-duration: 25ms;
 }
 
@@ -26,7 +26,7 @@
 .button-root.button-tonal.button-neutral:focus-visible {
   background-color: rgba(var(--md-ref-palette-neutral-variant40), 0.2);
 }
-.button-root.button-tonal.button-neutral:active {
+.button-root.button-tonal.button-neutral:active:not(:disabled) {
   background-color: rgba(var(--md-ref-palette-neutral-variant40), 0.3);
 }
 /* Tonal - primary */
@@ -37,7 +37,7 @@
 .button-root.button-tonal.button-primary:focus-visible {
   background-color: rgba(var(--md-ref-palette-primary40), 0.3);
 }
-.button-root.button-tonal.button-primary:active {
+.button-root.button-tonal.button-primary:active:not(:disabled) {
   background-color: rgba(var(--md-ref-palette-primary40), 0.4);
 }
 
@@ -49,7 +49,7 @@
 .button-root.button-filled.button-neutral:focus-visible {
   background-color: rgb(var(--md-ref-palette-neutral-variant30));
 }
-.button-root.button-filled.button-neutral:active {
+.button-root.button-filled.button-neutral:active:not(:disabled) {
   background-color: rgb(var(--md-ref-palette-neutral-variant10));
 }
 /* Filled - primary */
@@ -60,26 +60,26 @@
 .button-root.button-filled.button-primary:focus-visible {
   background-color: rgb(var(--md-ref-palette-primary50));
 }
-.button-root.button-filled.button-primary:active {
+.button-root.button-filled.button-primary:active:not(:disabled) {
   background-color: rgb(var(--md-ref-palette-primary30));
 }
 
 @media (hover: hover) {
   /* Tonal - neutral (hover) */
-  .button-root.button-tonal.button-neutral:hover:not(:active) {
+  .button-root.button-tonal.button-neutral:hover:not(:active):not(:disabled) {
     background-color: rgba(var(--md-ref-palette-neutral-variant40), 0.2);
   }
   /* Tonal - primary (hover) */
-  .button-root.button-tonal.button-primary:hover:not(:active) {
+  .button-root.button-tonal.button-primary:hover:not(:active):not(:disabled) {
     background-color: rgba(var(--md-ref-palette-primary40), 0.3);
   }
 
   /* Filled - neutral (hover) */
-  .button-root.button-filled.button-neutral:hover:not(:active) {
+  .button-root.button-filled.button-neutral:hover:not(:active):not(:disabled) {
     background-color: rgb(var(--md-ref-palette-neutral-variant30));
   }
   /* Filled - primary (hover) */
-  .button-root.button-filled.button-primary:hover:not(:active) {
+  .button-root.button-filled.button-primary:hover:not(:active):not(:disabled) {
     background-color: rgb(var(--md-ref-palette-primary50));
   }
 }
@@ -93,7 +93,7 @@
   .button-root.button-tonal.button-neutral:focus-visible {
     background-color: rgba(var(--md-ref-palette-neutral-variant80), 0.2);
   }
-  .button-root.button-tonal.button-neutral:active {
+  .button-root.button-tonal.button-neutral:active:not(:disabled) {
     background-color: rgba(var(--md-ref-palette-neutral-variant80), 0.3);
   }
   /* Tonal - primary (dark) */
@@ -104,7 +104,7 @@
   .button-root.button-tonal.button-primary:focus-visible {
     background-color: rgba(var(--md-ref-palette-primary80), 0.3);
   }
-  .button-root.button-tonal.button-primary:active {
+  .button-root.button-tonal.button-primary:active:not(:disabled) {
     background-color: rgba(var(--md-ref-palette-primary80), 0.4);
   }
 
@@ -116,7 +116,7 @@
   .button-root.button-filled.button-neutral:focus-visible {
     background-color: rgb(var(--md-ref-palette-neutral-variant98));
   }
-  .button-root.button-filled.button-neutral:active {
+  .button-root.button-filled.button-neutral:active:not(:disabled) {
     background-color: rgb(var(--md-ref-palette-neutral-variant80));
   }
   /* Filled - primary (dark) */
@@ -127,27 +127,27 @@
   .button-root.button-filled.button-primary:focus-visible {
     background-color: rgb(var(--md-ref-palette-primary90));
   }
-  .button-root.button-filled.button-primary:active {
+  .button-root.button-filled.button-primary:active:not(:disabled) {
     background-color: rgb(var(--md-ref-palette-primary70));
   }
 }
 
 @media (hover: hover) and (prefers-color-scheme: dark) {
   /* Tonal - neutral (dark + hover) */
-  .button-root.button-tonal.button-neutral:hover:not(:active) {
+  .button-root.button-tonal.button-neutral:hover:not(:active):not(:disabled) {
     background-color: rgba(var(--md-ref-palette-neutral-variant80), 0.2);
   }
   /* Tonal - primary (dark + hover) */
-  .button-root.button-tonal.button-primary:hover:not(:active) {
+  .button-root.button-tonal.button-primary:hover:not(:active):not(:disabled) {
     background-color: rgba(var(--md-ref-palette-primary80), 0.3);
   }
 
   /* Filled - neutral (dark + hover) */
-  .button-root.button-filled.button-neutral:hover:not(:active) {
+  .button-root.button-filled.button-neutral:hover:not(:active):not(:disabled) {
     background-color: rgb(var(--md-ref-palette-neutral-variant98));
   }
   /* Filled - primary (dark + hover) */
-  .button-root.button-filled.button-primary:hover:not(:active) {
+  .button-root.button-filled.button-primary:hover:not(:active):not(:disabled) {
     background-color: rgb(var(--md-ref-palette-primary90));
   }
 }
