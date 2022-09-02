@@ -1,4 +1,4 @@
-import Button, { ButtonColor, ButtonVariant } from './components/Button';
+import Button, { ButtonColor, ButtonVariant } from 'components/Button';
 
 import classes from './App.module.css';
 
