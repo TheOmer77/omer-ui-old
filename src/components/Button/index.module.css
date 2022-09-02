@@ -43,14 +43,14 @@
 
 /* Filled - neutral */
 .button-root.button-filled.button-neutral {
-  background-color: rgb(var(--md-ref-palette-secondary40));
+  background-color: rgb(var(--md-ref-palette-secondary20));
   color: rgb(var(--md-ref-palette-secondary98));
 }
 .button-root.button-filled.button-neutral:focus-visible {
-  background-color: rgb(var(--md-ref-palette-secondary50));
+  background-color: rgb(var(--md-ref-palette-secondary30));
 }
 .button-root.button-filled.button-neutral:active {
-  background-color: rgb(var(--md-ref-palette-secondary30));
+  background-color: rgb(var(--md-ref-palette-secondary10));
 }
 /* Filled - primary */
 .button-root.button-filled.button-primary {
@@ -76,7 +76,7 @@
 
   /* Filled - neutral (hover) */
   .button-root.button-filled.button-neutral:hover:not(:active) {
-    background-color: rgb(var(--md-ref-palette-secondary50));
+    background-color: rgb(var(--md-ref-palette-secondary30));
   }
   /* Filled - primary (hover) */
   .button-root.button-filled.button-primary:hover:not(:active) {
@@ -110,14 +110,14 @@
 
   /* Filled - neutral (dark) */
   .button-root.button-filled.button-neutral {
-    background-color: rgb(var(--md-ref-palette-secondary80));
+    background-color: rgb(var(--md-ref-palette-secondary90));
     color: rgb(var(--md-ref-palette-secondary10));
   }
   .button-root.button-filled.button-neutral:focus-visible {
-    background-color: rgb(var(--md-ref-palette-secondary90));
+    background-color: rgb(var(--md-ref-palette-secondary98));
   }
   .button-root.button-filled.button-neutral:active {
-    background-color: rgb(var(--md-ref-palette-secondary70));
+    background-color: rgb(var(--md-ref-palette-secondary80));
   }
   /* Filled - primary (dark) */
   .button-root.button-filled.button-primary {
@@ -144,7 +144,7 @@
 
   /* Filled - neutral (dark + hover) */
   .button-root.button-filled.button-neutral:hover:not(:active) {
-    background-color: rgb(var(--md-ref-palette-secondary90));
+    background-color: rgb(var(--md-ref-palette-secondary98));
   }
   /* Filled - primary (dark + hover) */
   .button-root.button-filled.button-primary:hover:not(:active) {
