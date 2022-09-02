@@ -1,6 +1,11 @@
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+
 import Button, { ButtonColor, ButtonVariant } from 'components/Button';
 
-import classes from './App.module.css';
+import '@fontsource/manrope/variable.css';
+import 'styles/index.css';
+import classes from './index.module.css';
 
 const buttonsDemo: [ButtonVariant, ButtonColor][] = [
   ['tonal', 'neutral'],
@@ -9,8 +14,8 @@ const buttonsDemo: [ButtonVariant, ButtonColor][] = [
   ['filled', 'primary'],
 ];
 
-const App = () => (
-  <div>
+const DemoApp = () => (
+  <>
     <div className={classes['demo-row']}>
       {buttonsDemo.map(([variant, color]) => (
         <div key={`${variant}-${color}`} className={classes['demo-column']}>
@@ -35,7 +40,11 @@ const App = () => (
         </div>
       ))}
     </div>
-  </div>
+  </>
 );
 
-export default App;
+createRoot(document.getElementById('root') as HTMLElement).render(
+  <React.StrictMode>
+    <DemoApp />
+  </React.StrictMode>
+);
