@@ -60,6 +60,10 @@
 .button-root.button-filled.button-neutral:active:not(:disabled) {
   background-color: rgb(var(--md-ref-palette-neutral-variant10));
 }
+.button-root.button-filled.button-neutral:disabled {
+  background-color: rgba(var(--md-ref-palette-neutral-variant20), 0.6);
+  color: rgba(var(--md-ref-palette-neutral-variant98), 0.8);
+}
 /* Filled - primary */
 .button-root.button-filled.button-primary {
   background-color: rgb(var(--md-ref-palette-primary40));
@@ -70,6 +74,10 @@
 }
 .button-root.button-filled.button-primary:active:not(:disabled) {
   background-color: rgb(var(--md-ref-palette-primary30));
+}
+.button-root.button-filled.button-primary:disabled {
+  background-color: rgba(var(--md-ref-palette-primary40), 0.6);
+  color: rgba(var(--md-ref-palette-primary98), 0.8);
 }
 
 @media (hover: hover) {
@@ -135,6 +143,10 @@
   .button-root.button-filled.button-neutral:active:not(:disabled) {
     background-color: rgb(var(--md-ref-palette-neutral-variant80));
   }
+  .button-root.button-filled.button-neutral:disabled {
+    background-color: rgba(var(--md-ref-palette-neutral-variant90), 0.6);
+    color: rgba(var(--md-ref-palette-neutral-variant10), 0.8);
+  }
   /* Filled - primary (dark) */
   .button-root.button-filled.button-primary {
     background-color: rgb(var(--md-ref-palette-primary80));
@@ -145,6 +157,10 @@
   }
   .button-root.button-filled.button-primary:active:not(:disabled) {
     background-color: rgb(var(--md-ref-palette-primary70));
+  }
+  .button-root.button-filled.button-primary:disabled {
+    background-color: rgba(var(--md-ref-palette-primary80), 0.6);
+    color: rgba(var(--md-ref-palette-primary10), 0.8);
   }
 }
 
