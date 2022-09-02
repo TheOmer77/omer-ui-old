@@ -18,14 +18,14 @@
 
 /* VARIANTS */
 .button-root.button-tonal.button-neutral {
-  background-color: rgba(var(--md-ref-palette-secondary40), 0.2);
-  color: rgb(var(--md-ref-palette-secondary40));
+  background-color: rgba(var(--md-ref-palette-secondary40), 0.1);
+  color: rgb(var(--md-ref-palette-secondary20));
 }
 .button-root.button-tonal.button-neutral:focus-visible {
-  background-color: rgba(var(--md-ref-palette-secondary40), 0.3);
+  background-color: rgba(var(--md-ref-palette-secondary40), 0.2);
 }
 .button-root.button-tonal.button-neutral:active {
-  background-color: rgba(var(--md-ref-palette-secondary40), 0.4);
+  background-color: rgba(var(--md-ref-palette-secondary40), 0.3);
 }
 .button-root.button-tonal.button-primary {
   background-color: rgba(var(--md-ref-palette-primary40), 0.2);
@@ -61,7 +61,7 @@
 
 @media (hover: hover) {
   .button-root.button-tonal.button-neutral:hover:not(:active) {
-    background-color: rgba(var(--md-ref-palette-secondary40), 0.3);
+    background-color: rgba(var(--md-ref-palette-secondary40), 0.2);
   }
   .button-root.button-tonal.button-primary:hover:not(:active) {
     background-color: rgba(var(--md-ref-palette-primary40), 0.3);
@@ -77,14 +77,14 @@
 
 @media (prefers-color-scheme: dark) {
   .button-root.button-tonal.button-neutral {
-    background-color: rgba(var(--md-ref-palette-secondary80), 0.2);
-    color: rgb(var(--md-ref-palette-secondary80));
+    background-color: rgba(var(--md-ref-palette-secondary80), 0.1);
+    color: rgb(var(--md-ref-palette-secondary90));
   }
   .button-root.button-tonal.button-neutral:focus-visible {
-    background-color: rgba(var(--md-ref-palette-secondary80), 0.3);
+    background-color: rgba(var(--md-ref-palette-secondary80), 0.2);
   }
   .button-root.button-tonal.button-neutral:active {
-    background-color: rgba(var(--md-ref-palette-secondary80), 0.4);
+    background-color: rgba(var(--md-ref-palette-secondary80), 0.3);
   }
   .button-root.button-tonal.button-primary {
     background-color: rgba(var(--md-ref-palette-primary80), 0.2);
@@ -120,7 +120,7 @@
 }
 @media (hover: hover) and (prefers-color-scheme: dark) {
   .button-root.button-tonal.button-neutral:hover:not(:active) {
-    background-color: rgba(var(--md-ref-palette-secondary80), 0.3);
+    background-color: rgba(var(--md-ref-palette-secondary80), 0.2);
   }
   .button-root.button-tonal.button-primary:hover:not(:active) {
     background-color: rgba(var(--md-ref-palette-primary80), 0.3);
