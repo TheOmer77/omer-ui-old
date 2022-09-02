@@ -1,17 +1,11 @@
 import Button from './components/Button';
 
+import classes from './App.module.css';
+
 const App = () => (
   <div>
-    <div style={{ display: 'flex', flexDirection: 'row', gap: '1rem' }}>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'flex-start',
-          alignItems: 'flex-start',
-          gap: '1rem',
-        }}
-      >
+    <div className={classes['demo-row']}>
+      <div className={classes['demo-column']}>
         <Button variant='tonal' size='small'>
           Button
         </Button>
@@ -22,15 +16,7 @@ const App = () => (
           Button
         </Button>
       </div>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'flex-start',
-          alignItems: 'flex-start',
-          gap: '1rem',
-        }}
-      >
+      <div className={classes['demo-column']}>
         <Button variant='filled' size='small'>
           Button
         </Button>
