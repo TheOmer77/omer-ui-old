@@ -20,17 +20,17 @@
 
 /* Tonal - neutral */
 .button-root.button-tonal.button-neutral {
-  background-color: rgba(var(--md-ref-palette-neutral-variant40), 0.1);
+  background-color: rgba(var(--md-ref-palette-neutral-variant60), 0.2);
   color: rgb(var(--md-ref-palette-neutral-variant20));
 }
 .button-root.button-tonal.button-neutral:focus-visible {
-  background-color: rgba(var(--md-ref-palette-neutral-variant40), 0.2);
+  background-color: rgba(var(--md-ref-palette-neutral-variant50), 0.3);
 }
 .button-root.button-tonal.button-neutral:active:not(:disabled) {
-  background-color: rgba(var(--md-ref-palette-neutral-variant40), 0.3);
+  background-color: rgba(var(--md-ref-palette-neutral-variant50), 0.4);
 }
 .button-root.button-tonal.button-neutral:disabled {
-  background-color: rgba(var(--md-ref-palette-neutral-variant40), 0.05);
+  background-color: rgba(var(--md-ref-palette-neutral-variant60), 0.1);
   color: rgba(var(--md-ref-palette-neutral-variant20), 0.4);
 }
 /* Tonal - primary */
@@ -83,7 +83,7 @@
 @media (hover: hover) {
   /* Tonal - neutral (hover) */
   .button-root.button-tonal.button-neutral:hover:not(:active):not(:disabled) {
-    background-color: rgba(var(--md-ref-palette-neutral-variant40), 0.2);
+    background-color: rgba(var(--md-ref-palette-neutral-variant50), 0.3);
   }
   /* Tonal - primary (hover) */
   .button-root.button-tonal.button-primary:hover:not(:active):not(:disabled) {
@@ -103,17 +103,17 @@
 @media (prefers-color-scheme: dark) {
   /* Tonal - neutral (dark) */
   .button-root.button-tonal.button-neutral {
-    background-color: rgba(var(--md-ref-palette-neutral-variant80), 0.1);
+    background-color: rgba(var(--md-ref-palette-neutral-variant50), 0.2);
     color: rgb(var(--md-ref-palette-neutral-variant90));
   }
   .button-root.button-tonal.button-neutral:focus-visible {
-    background-color: rgba(var(--md-ref-palette-neutral-variant80), 0.2);
+    background-color: rgba(var(--md-ref-palette-neutral-variant60), 0.3);
   }
   .button-root.button-tonal.button-neutral:active:not(:disabled) {
-    background-color: rgba(var(--md-ref-palette-neutral-variant80), 0.3);
+    background-color: rgba(var(--md-ref-palette-neutral-variant60), 0.4);
   }
   .button-root.button-tonal.button-neutral:disabled {
-    background-color: rgba(var(--md-ref-palette-neutral-variant80), 0.05);
+    background-color: rgba(var(--md-ref-palette-neutral-variant50), 0.1);
     color: rgba(var(--md-ref-palette-neutral-variant90), 0.4);
   }
   /* Tonal - primary (dark) */
@@ -167,7 +167,7 @@
 @media (hover: hover) and (prefers-color-scheme: dark) {
   /* Tonal - neutral (dark + hover) */
   .button-root.button-tonal.button-neutral:hover:not(:active):not(:disabled) {
-    background-color: rgba(var(--md-ref-palette-neutral-variant80), 0.2);
+    background-color: rgba(var(--md-ref-palette-neutral-variant60), 0.3);
   }
   /* Tonal - primary (dark + hover) */
   .button-root.button-tonal.button-primary:hover:not(:active):not(:disabled) {
