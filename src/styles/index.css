@@ -1,8 +1,8 @@
 @import url('theme.css');
 
 body {
-  background-color: rgb(var(--md-ref-palette-secondary98));
-  color: rgb(var(--md-ref-palette-secondary10));
+  background-color: rgb(var(--md-ref-palette-neutral-variant98));
+  color: rgb(var(--md-ref-palette-neutral-variant10));
 
   /* Body - large by default */
   font-family: var(--md-sys-typescale-body-large-font-family-name);
@@ -17,7 +17,7 @@ body {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: rgb(var(--md-ref-palette-secondary10));
-    color: rgb(var(--md-ref-palette-secondary98));
+    background-color: rgb(var(--md-ref-palette-neutral-variant10));
+    color: rgb(var(--md-ref-palette-neutral-variant98));
   }
 }

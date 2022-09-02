@@ -20,14 +20,14 @@
 
 /* Tonal - neutral */
 .button-root.button-tonal.button-neutral {
-  background-color: rgba(var(--md-ref-palette-secondary40), 0.1);
-  color: rgb(var(--md-ref-palette-secondary20));
+  background-color: rgba(var(--md-ref-palette-neutral-variant40), 0.1);
+  color: rgb(var(--md-ref-palette-neutral-variant20));
 }
 .button-root.button-tonal.button-neutral:focus-visible {
-  background-color: rgba(var(--md-ref-palette-secondary40), 0.2);
+  background-color: rgba(var(--md-ref-palette-neutral-variant40), 0.2);
 }
 .button-root.button-tonal.button-neutral:active {
-  background-color: rgba(var(--md-ref-palette-secondary40), 0.3);
+  background-color: rgba(var(--md-ref-palette-neutral-variant40), 0.3);
 }
 /* Tonal - primary */
 .button-root.button-tonal.button-primary {
@@ -43,14 +43,14 @@
 
 /* Filled - neutral */
 .button-root.button-filled.button-neutral {
-  background-color: rgb(var(--md-ref-palette-secondary20));
-  color: rgb(var(--md-ref-palette-secondary98));
+  background-color: rgb(var(--md-ref-palette-neutral-variant20));
+  color: rgb(var(--md-ref-palette-neutral-variant98));
 }
 .button-root.button-filled.button-neutral:focus-visible {
-  background-color: rgb(var(--md-ref-palette-secondary30));
+  background-color: rgb(var(--md-ref-palette-neutral-variant30));
 }
 .button-root.button-filled.button-neutral:active {
-  background-color: rgb(var(--md-ref-palette-secondary10));
+  background-color: rgb(var(--md-ref-palette-neutral-variant10));
 }
 /* Filled - primary */
 .button-root.button-filled.button-primary {
@@ -67,7 +67,7 @@
 @media (hover: hover) {
   /* Tonal - neutral (hover) */
   .button-root.button-tonal.button-neutral:hover:not(:active) {
-    background-color: rgba(var(--md-ref-palette-secondary40), 0.2);
+    background-color: rgba(var(--md-ref-palette-neutral-variant40), 0.2);
   }
   /* Tonal - primary (hover) */
   .button-root.button-tonal.button-primary:hover:not(:active) {
@@ -76,7 +76,7 @@
 
   /* Filled - neutral (hover) */
   .button-root.button-filled.button-neutral:hover:not(:active) {
-    background-color: rgb(var(--md-ref-palette-secondary30));
+    background-color: rgb(var(--md-ref-palette-neutral-variant30));
   }
   /* Filled - primary (hover) */
   .button-root.button-filled.button-primary:hover:not(:active) {
@@ -87,14 +87,14 @@
 @media (prefers-color-scheme: dark) {
   /* Tonal - neutral (dark) */
   .button-root.button-tonal.button-neutral {
-    background-color: rgba(var(--md-ref-palette-secondary80), 0.1);
-    color: rgb(var(--md-ref-palette-secondary90));
+    background-color: rgba(var(--md-ref-palette-neutral-variant80), 0.1);
+    color: rgb(var(--md-ref-palette-neutral-variant90));
   }
   .button-root.button-tonal.button-neutral:focus-visible {
-    background-color: rgba(var(--md-ref-palette-secondary80), 0.2);
+    background-color: rgba(var(--md-ref-palette-neutral-variant80), 0.2);
   }
   .button-root.button-tonal.button-neutral:active {
-    background-color: rgba(var(--md-ref-palette-secondary80), 0.3);
+    background-color: rgba(var(--md-ref-palette-neutral-variant80), 0.3);
   }
   /* Tonal - primary (dark) */
   .button-root.button-tonal.button-primary {
@@ -110,14 +110,14 @@
 
   /* Filled - neutral (dark) */
   .button-root.button-filled.button-neutral {
-    background-color: rgb(var(--md-ref-palette-secondary90));
-    color: rgb(var(--md-ref-palette-secondary10));
+    background-color: rgb(var(--md-ref-palette-neutral-variant90));
+    color: rgb(var(--md-ref-palette-neutral-variant10));
   }
   .button-root.button-filled.button-neutral:focus-visible {
-    background-color: rgb(var(--md-ref-palette-secondary98));
+    background-color: rgb(var(--md-ref-palette-neutral-variant98));
   }
   .button-root.button-filled.button-neutral:active {
-    background-color: rgb(var(--md-ref-palette-secondary80));
+    background-color: rgb(var(--md-ref-palette-neutral-variant80));
   }
   /* Filled - primary (dark) */
   .button-root.button-filled.button-primary {
@@ -135,7 +135,7 @@
 @media (hover: hover) and (prefers-color-scheme: dark) {
   /* Tonal - neutral (dark + hover) */
   .button-root.button-tonal.button-neutral:hover:not(:active) {
-    background-color: rgba(var(--md-ref-palette-secondary80), 0.2);
+    background-color: rgba(var(--md-ref-palette-neutral-variant80), 0.2);
   }
   /* Tonal - primary (dark + hover) */
   .button-root.button-tonal.button-primary:hover:not(:active) {
@@ -144,7 +144,7 @@
 
   /* Filled - neutral (dark + hover) */
   .button-root.button-filled.button-neutral:hover:not(:active) {
-    background-color: rgb(var(--md-ref-palette-secondary98));
+    background-color: rgb(var(--md-ref-palette-neutral-variant98));
   }
   /* Filled - primary (dark + hover) */
   .button-root.button-filled.button-primary:hover:not(:active) {
