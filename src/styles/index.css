@@ -4,8 +4,15 @@ body {
   background-color: rgb(var(--md-ref-palette-secondary98));
   color: rgb(var(--md-ref-palette-secondary10));
 
-  font-family: 'ManropeVariable', sans-serif;
-  font-weight: 400;
+  /* Body - large by default */
+  font-family: var(--md-sys-typescale-body-large-font-family-name);
+  font-style: var(--md-sys-typescale-body-large-font-family-style);
+  font-weight: var(--md-sys-typescale-body-large-font-weight);
+  font-size: var(--md-sys-typescale-body-large-font-size);
+  letter-spacing: var(--md-sys-typescale-body-large-tracking);
+  line-height: var(--md-sys-typescale-body-large-height);
+  text-transform: var(--md-sys-typescale-body-large-text-transform);
+  text-decoration: var(--md-sys-typescale-body-large-text-decoration);
 }
 
 @media (prefers-color-scheme: dark) {
