@@ -29,6 +29,10 @@
 .button-root.button-tonal.button-neutral:active:not(:disabled) {
   background-color: rgba(var(--md-ref-palette-neutral-variant40), 0.3);
 }
+.button-root.button-tonal.button-neutral:disabled {
+  background-color: rgba(var(--md-ref-palette-neutral-variant40), 0.05);
+  color: rgba(var(--md-ref-palette-neutral-variant20), 0.4);
+}
 /* Tonal - primary */
 .button-root.button-tonal.button-primary {
   background-color: rgba(var(--md-ref-palette-primary40), 0.2);
@@ -39,6 +43,10 @@
 }
 .button-root.button-tonal.button-primary:active:not(:disabled) {
   background-color: rgba(var(--md-ref-palette-primary40), 0.4);
+}
+.button-root.button-tonal.button-primary:disabled {
+  background-color: rgba(var(--md-ref-palette-primary40), 0.1);
+  color: rgba(var(--md-ref-palette-primary40), 0.4);
 }
 
 /* Filled - neutral */
@@ -96,6 +104,10 @@
   .button-root.button-tonal.button-neutral:active:not(:disabled) {
     background-color: rgba(var(--md-ref-palette-neutral-variant80), 0.3);
   }
+  .button-root.button-tonal.button-neutral:disabled {
+    background-color: rgba(var(--md-ref-palette-neutral-variant80), 0.05);
+    color: rgba(var(--md-ref-palette-neutral-variant90), 0.4);
+  }
   /* Tonal - primary (dark) */
   .button-root.button-tonal.button-primary {
     background-color: rgba(var(--md-ref-palette-primary80), 0.2);
@@ -106,6 +118,10 @@
   }
   .button-root.button-tonal.button-primary:active:not(:disabled) {
     background-color: rgba(var(--md-ref-palette-primary80), 0.4);
+  }
+  .button-root.button-tonal.button-primary:disabled {
+    background-color: rgba(var(--md-ref-palette-primary80), 0.1);
+    color: rgba(var(--md-ref-palette-primary80), 0.4);
   }
 
   /* Filled - neutral (dark) */
