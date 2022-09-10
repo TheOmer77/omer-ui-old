@@ -4,6 +4,7 @@
   border: none;
   font-weight: 600;
   font-family: var(--md-sys-typescale-body-large-font-family-name);
+  user-select: none;
 
   display: flex;
   flex-direction: row;
