@@ -8,7 +8,7 @@ import { ReactComponent as AddIcon } from './assets/icons/add.svg';
 import { ReactComponent as ChevronRightIcon } from './assets/icons/chevron_right.svg';
 
 // CSS
-import '@fontsource/manrope/variable.css';
+import '@fontsource/figtree/variable.css';
 import 'styles/index.css';
 import classes from './index.module.css';
 
