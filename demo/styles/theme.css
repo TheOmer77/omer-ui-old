@@ -25,6 +25,11 @@
   --color-primary-90: 220, 225, 255;
   --color-primary-95: 239, 240, 255;
 
+  --color-primary-main: var(--color-primary-40);
+  --color-primary-light: var(--color-primary-55);
+  --color-primary-dark: var(--color-primary-25);
+  --color-primary-contrast: var(--color-primary-95);
+
   /* primary-neutral */
   --color-primary-neutral-5: 15, 17, 24;
   --color-primary-neutral-10: 26, 27, 35;
@@ -46,6 +51,11 @@
   --color-primary-neutral-90: 226, 225, 236;
   --color-primary-neutral-95: 240, 240, 250;
 
+  --color-primary-neutral-main: var(--color-primary-neutral-20);
+  --color-primary-neutral-light: var(--color-primary-neutral-35);
+  --color-primary-neutral-dark: var(--color-primary-neutral-5);
+  --color-primary-neutral-contrast: var(--color-primary-neutral-95);
+
   /* secondary */
   --color-secondary-5: 22, 16, 0;
   --color-secondary-10: 35, 27, 0;
@@ -66,4 +76,33 @@
   --color-secondary-85: 240, 210, 113;
   --color-secondary-90: 255, 224, 126;
   --color-secondary-95: 255, 240, 200;
+
+  --color-secondary-main: var(--color-secondary-40);
+  --color-secondary-light: var(--color-secondary-55);
+  --color-secondary-dark: var(--color-secondary-25);
+  --color-secondary-contrast: var(--color-secondary-95);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* COLORS - DARK */
+
+    /* primary */
+    --color-primary-main: var(--color-primary-80);
+    --color-primary-light: var(--color-primary-95);
+    --color-primary-dark: var(--color-primary-65);
+    --color-primary-contrast: var(--color-primary-5);
+
+    /* primary-neutral */
+    --color-primary-neutral-main: var(--color-primary-neutral-80);
+    --color-primary-neutral-light: var(--color-primary-neutral-95);
+    --color-primary-neutral-dark: var(--color-primary-neutral-65);
+    --color-primary-neutral-contrast: var(--color-primary-neutral-5);
+
+    /* secondary */
+    --color-secondary-main: var(--color-secondary-80);
+    --color-secondary-light: var(--color-secondary-95);
+    --color-secondary-dark: var(--color-secondary-65);
+    --color-secondary-contrast: var(--color-secondary-5);
+  }
 }

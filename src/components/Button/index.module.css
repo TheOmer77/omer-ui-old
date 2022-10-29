@@ -55,85 +55,65 @@
 
 /* Tonal - neutral */
 .button-root.button-tonal.button-neutral {
-  --button-color: var(--color-primary-neutral-60), 0.2;
-  --button-color--hover: var(--color-primary-neutral-50), 0.3;
-  --button-color--active: var(--color-primary-neutral-40), 0.4;
-  --button-color--disabled: var(--color-primary-neutral-60), 0.1;
+  --button-color: var(--color-primary-neutral-light), 0.2;
+  --button-color--hover: var(--color-primary-neutral-main), 0.3;
+  --button-color--active: var(--color-primary-neutral-main), 0.45;
+  --button-color--disabled: var(--color-primary-neutral-light), 0.1;
 
-  --button-text-color: var(--color-primary-neutral-20);
-  --button-text-color--disabled: var(--color-primary-neutral-20), 0.4;
+  --button-text-color: var(--color-primary-neutral-main);
+  --button-text-color--disabled: var(--color-primary-neutral-main), 0.4;
 }
 /* Tonal - primary */
 .button-root.button-tonal.button-primary {
-  --button-color: var(--color-primary-50), 0.2;
-  --button-color--hover: var(--color-primary-40), 0.3;
-  --button-color--active: var(--color-primary-30), 0.4;
-  --button-color--disabled: var(--color-primary-50), 0.1;
+  --button-color: var(--color-primary-light), 0.2;
+  --button-color--hover: var(--color-primary-main), 0.3;
+  --button-color--active: var(--color-primary-main), 0.45;
+  --button-color--disabled: var(--color-primary-light), 0.1;
 
-  --button-text-color: var(--color-primary-40);
-  --button-text-color--disabled: var(--color-primary-40), 0.4;
+  --button-text-color: var(--color-primary-main);
+  --button-text-color--disabled: var(--color-primary-main), 0.4;
 }
 /* Filled - neutral */
 .button-root.button-filled.button-neutral {
-  --button-color: var(--color-primary-neutral-20);
-  --button-color--hover: var(--color-primary-neutral-35);
-  --button-color--active: var(--color-primary-neutral-5);
-  --button-color--disabled: var(--color-primary-neutral-20), 0.6;
+  --button-color: var(--color-primary-neutral-main);
+  --button-color--hover: var(--color-primary-neutral-light);
+  --button-color--active: var(--color-primary-neutral-dark);
+  --button-color--disabled: var(--color-primary-neutral-main), 0.6;
 
-  --button-text-color: var(--color-primary-neutral-95);
-  --button-text-color--disabled: var(--color-primary-neutral-95), 0.8;
+  --button-text-color: var(--color-primary-neutral-contrast);
+  --button-text-color--disabled: var(--color-primary-neutral-contrast), 0.8;
 }
 /* Filled - primary */
 .button-root.button-filled.button-primary {
-  --button-color: var(--color-primary-40);
-  --button-color--hover: var(--color-primary-55);
-  --button-color--active: var(--color-primary-25);
-  --button-color--disabled: var(--color-primary-40), 0.6;
+  --button-color: var(--color-primary-main);
+  --button-color--hover: var(--color-primary-light);
+  --button-color--active: var(--color-primary-dark);
+  --button-color--disabled: var(--color-primary-main), 0.6;
 
-  --button-text-color: var(--color-primary-95);
-  --button-text-color--disabled: var(--color-primary-95), 0.8;
+  --button-text-color: var(--color-primary-contrast);
+  --button-text-color--disabled: var(--color-primary-contrast), 0.8;
 }
 
 @media (prefers-color-scheme: dark) {
   /* Tonal - neutral (dark) */
   .button-root.button-tonal.button-neutral {
-    --button-color: var(--color-primary-neutral-50), 0.2;
-    --button-color--hover: var(--color-primary-neutral-60), 0.3;
-    --button-color--active: var(--color-primary-neutral-70), 0.4;
-    --button-color--disabled: var(--color-primary-neutral-50), 0.1;
+    --button-color: var(--color-primary-neutral-dark), 0.2;
+    --button-color--hover: var(--color-primary-neutral-main), 0.3;
+    --button-color--active: var(--color-primary-neutral-main), 0.45;
+    --button-color--disabled: var(--color-primary-neutral-dark), 0.1;
 
-    --button-text-color: var(--color-primary-neutral-90);
-    --button-text-color--disabled: var(--color-primary-neutral-90), 0.4;
+    --button-text-color: var(--color-primary-neutral-main);
+    --button-text-color--disabled: var(--color-primary-neutral-main), 0.4;
   }
   /* Tonal - primary (dark) */
   .button-root.button-tonal.button-primary {
-    --button-color: var(--color-primary-70), 0.2;
-    --button-color--hover: var(--color-primary-80), 0.3;
-    --button-color--active: var(--color-primary-90), 0.4;
-    --button-color--disabled: var(--color-primary-70), 0.1;
+    --button-color: var(--color-primary-dark), 0.2;
+    --button-color--hover: var(--color-primary-main), 0.3;
+    --button-color--active: var(--color-primary-main), 0.45;
+    --button-color--disabled: var(--color-primary-dark), 0.1;
 
-    --button-text-color: var(--color-primary-80);
-    --button-text-color--disabled: var(--color-primary-80), 0.4;
-  }
-  /* Filled - neutral (dark) */
-  .button-root.button-filled.button-neutral {
-    --button-color: var(--color-primary-neutral-80);
-    --button-color--hover: var(--color-primary-neutral-95);
-    --button-color--active: var(--color-primary-neutral-65);
-    --button-color--disabled: var(--color-primary-neutral-80), 0.6;
-
-    --button-text-color: var(--color-primary-neutral-10);
-    --button-text-color--disabled: var(--color-primary-neutral-10), 0.8;
-  }
-  /* Filled - primary (dark) */
-  .button-root.button-filled.button-primary {
-    --button-color: var(--color-primary-80);
-    --button-color--hover: var(--color-primary-95);
-    --button-color--active: var(--color-primary-65);
-    --button-color--disabled: var(--color-primary-80), 0.6;
-
-    --button-text-color: var(--color-primary-10);
-    --button-text-color--disabled: var(--color-primary-10), 0.8;
+    --button-text-color: var(--color-primary-main);
+    --button-text-color--disabled: var(--color-primary-main), 0.4;
   }
 }
 
