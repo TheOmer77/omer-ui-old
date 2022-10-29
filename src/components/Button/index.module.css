@@ -80,8 +80,8 @@
   --button-color--active: rgb(var(--color-primary-neutral-0));
   --button-color--disabled: rgba(var(--color-primary-neutral-20), 0.6);
 
-  --button-text-color: rgb(var(--color-primary-neutral-98));
-  --button-text-color--disabled: rgba(var(--color-primary-neutral-98), 0.8);
+  --button-text-color: rgb(var(--color-primary-neutral-95));
+  --button-text-color--disabled: rgba(var(--color-primary-neutral-95), 0.8);
 
   --button-shadow-color-1: rgba(var(--color-primary-neutral-20), 0.3);
   --button-shadow-color-2: rgba(var(--color-primary-neutral-20), 0.15);
@@ -93,8 +93,8 @@
   --button-color--active: rgb(var(--color-primary-20));
   --button-color--disabled: rgba(var(--color-primary-40), 0.6);
 
-  --button-text-color: rgb(var(--color-primary-98));
-  --button-text-color--disabled: rgba(var(--color-primary-98), 0.8);
+  --button-text-color: rgb(var(--color-primary-95));
+  --button-text-color--disabled: rgba(var(--color-primary-95), 0.8);
 
   --button-shadow-color-1: rgba(var(--color-primary-30), 0.3);
   --button-shadow-color-2: rgba(var(--color-primary-30), 0.15);
@@ -124,7 +124,7 @@
   /* Filled - neutral (dark) */
   .button-root.button-filled.button-neutral {
     --button-color: rgb(var(--color-primary-neutral-80));
-    --button-color--hover: rgb(var(--color-primary-neutral-98));
+    --button-color--hover: rgb(var(--color-primary-neutral-95));
     --button-color--active: rgb(var(--color-primary-neutral-60));
     --button-color--disabled: rgba(var(--color-primary-neutral-90), 0.6);
 
