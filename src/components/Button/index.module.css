@@ -55,118 +55,97 @@
 
 /* Tonal - neutral */
 .button-root.button-tonal.button-neutral {
-  --button-color: rgba(var(--md-ref-palette-neutral-variant60), 0.2);
-  --button-color--hover: rgba(var(--md-ref-palette-neutral-variant50), 0.3);
-  --button-color--active: rgba(var(--md-ref-palette-neutral-variant40), 0.4);
-  --button-color--disabled: rgba(var(--md-ref-palette-neutral-variant60), 0.1);
+  --button-color: rgba(var(--color-primary-neutral-60), 0.2);
+  --button-color--hover: rgba(var(--color-primary-neutral-50), 0.3);
+  --button-color--active: rgba(var(--color-primary-neutral-40), 0.4);
+  --button-color--disabled: rgba(var(--color-primary-neutral-60), 0.1);
 
-  --button-text-color: rgb(var(--md-ref-palette-neutral-variant20));
-  --button-text-color--disabled: rgba(
-    var(--md-ref-palette-neutral-variant20),
-    0.4
-  );
+  --button-text-color: rgb(var(--color-primary-neutral-20));
+  --button-text-color--disabled: rgba(var(--color-primary-neutral-20), 0.4);
 }
 /* Tonal - primary */
 .button-root.button-tonal.button-primary {
-  --button-color: rgba(var(--md-ref-palette-primary50), 0.2);
-  --button-color--hover: rgba(var(--md-ref-palette-primary50), 0.3);
-  --button-color--active: rgba(var(--md-ref-palette-primary40), 0.4);
-  --button-color--disabled: rgba(var(--md-ref-palette-primary40), 0.1);
+  --button-color: rgba(var(--color-primary-50), 0.2);
+  --button-color--hover: rgba(var(--color-primary-50), 0.3);
+  --button-color--active: rgba(var(--color-primary-40), 0.4);
+  --button-color--disabled: rgba(var(--color-primary-40), 0.1);
 
-  --button-text-color: rgb(var(--md-ref-palette-primary40));
-  --button-text-color--disabled: rgba(var(--md-ref-palette-primary40), 0.4);
+  --button-text-color: rgb(var(--color-primary-40));
+  --button-text-color--disabled: rgba(var(--color-primary-40), 0.4);
 }
 /* Filled - neutral */
 .button-root.button-filled.button-neutral {
-  --button-color: rgb(var(--md-ref-palette-neutral-variant20));
-  --button-color--hover: rgb(var(--md-ref-palette-neutral-variant40));
-  --button-color--active: rgb(var(--md-ref-palette-neutral-variant0));
-  --button-color--disabled: rgba(var(--md-ref-palette-neutral-variant20), 0.6);
+  --button-color: rgb(var(--color-primary-neutral-20));
+  --button-color--hover: rgb(var(--color-primary-neutral-40));
+  --button-color--active: rgb(var(--color-primary-neutral-0));
+  --button-color--disabled: rgba(var(--color-primary-neutral-20), 0.6);
 
-  --button-text-color: rgb(var(--md-ref-palette-neutral-variant98));
-  --button-text-color--disabled: rgba(
-    var(--md-ref-palette-neutral-variant98),
-    0.8
-  );
+  --button-text-color: rgb(var(--color-primary-neutral-98));
+  --button-text-color--disabled: rgba(var(--color-primary-neutral-98), 0.8);
 
-  --button-shadow-color-1: rgba(var(--md-ref-palette-neutral-variant20), 0.3);
-  --button-shadow-color-2: rgba(var(--md-ref-palette-neutral-variant20), 0.15);
+  --button-shadow-color-1: rgba(var(--color-primary-neutral-20), 0.3);
+  --button-shadow-color-2: rgba(var(--color-primary-neutral-20), 0.15);
 }
 /* Filled - primary */
 .button-root.button-filled.button-primary {
-  --button-color: rgb(var(--md-ref-palette-primary40));
-  --button-color--hover: rgb(var(--md-ref-palette-primary60));
-  --button-color--active: rgb(var(--md-ref-palette-primary20));
-  --button-color--disabled: rgba(var(--md-ref-palette-primary40), 0.6);
+  --button-color: rgb(var(--color-primary-40));
+  --button-color--hover: rgb(var(--color-primary-60));
+  --button-color--active: rgb(var(--color-primary-20));
+  --button-color--disabled: rgba(var(--color-primary-40), 0.6);
 
-  --button-text-color: rgb(var(--md-ref-palette-primary98));
-  --button-text-color--disabled: rgba(var(--md-ref-palette-primary98), 0.8);
+  --button-text-color: rgb(var(--color-primary-98));
+  --button-text-color--disabled: rgba(var(--color-primary-98), 0.8);
 
-  --button-shadow-color-1: rgba(var(--md-ref-palette-primary30), 0.3);
-  --button-shadow-color-2: rgba(var(--md-ref-palette-primary30), 0.15);
+  --button-shadow-color-1: rgba(var(--color-primary-30), 0.3);
+  --button-shadow-color-2: rgba(var(--color-primary-30), 0.15);
 }
 
 @media (prefers-color-scheme: dark) {
   /* Tonal - neutral (dark) */
   .button-root.button-tonal.button-neutral {
-    --button-color: rgba(var(--md-ref-palette-neutral-variant50), 0.2);
-    --button-color--hover: rgba(var(--md-ref-palette-neutral-variant60), 0.3);
-    --button-color--active: rgba(var(--md-ref-palette-neutral-variant70), 0.4);
-    --button-color--disabled: rgba(
-      var(--md-ref-palette-neutral-variant50),
-      0.1
-    );
+    --button-color: rgba(var(--color-primary-neutral-50), 0.2);
+    --button-color--hover: rgba(var(--color-primary-neutral-60), 0.3);
+    --button-color--active: rgba(var(--color-primary-neutral-70), 0.4);
+    --button-color--disabled: rgba(var(--color-primary-neutral-50), 0.1);
 
-    --button-text-color: rgb(var(--md-ref-palette-neutral-variant90));
-    --button-text-color--disabled: rgba(
-      var(--md-ref-palette-neutral-variant90),
-      0.4
-    );
+    --button-text-color: rgb(var(--color-primary-neutral-90));
+    --button-text-color--disabled: rgba(var(--color-primary-neutral-90), 0.4);
   }
   /* Tonal - primary (dark) */
   .button-root.button-tonal.button-primary {
-    --button-color: rgba(var(--md-ref-palette-primary80), 0.2);
-    --button-color--hover: rgba(var(--md-ref-palette-primary80), 0.3);
-    --button-color--active: rgba(var(--md-ref-palette-primary90), 0.4);
-    --button-color--disabled: rgba(var(--md-ref-palette-primary90), 0.1);
+    --button-color: rgba(var(--color-primary-80), 0.2);
+    --button-color--hover: rgba(var(--color-primary-80), 0.3);
+    --button-color--active: rgba(var(--color-primary-90), 0.4);
+    --button-color--disabled: rgba(var(--color-primary-90), 0.1);
 
-    --button-text-color: rgb(var(--md-ref-palette-primary80));
-    --button-text-color--disabled: rgba(var(--md-ref-palette-primary80), 0.4);
+    --button-text-color: rgb(var(--color-primary-80));
+    --button-text-color--disabled: rgba(var(--color-primary-80), 0.4);
   }
   /* Filled - neutral (dark) */
   .button-root.button-filled.button-neutral {
-    --button-color: rgb(var(--md-ref-palette-neutral-variant80));
-    --button-color--hover: rgb(var(--md-ref-palette-neutral-variant98));
-    --button-color--active: rgb(var(--md-ref-palette-neutral-variant60));
-    --button-color--disabled: rgba(
-      var(--md-ref-palette-neutral-variant90),
-      0.6
-    );
+    --button-color: rgb(var(--color-primary-neutral-80));
+    --button-color--hover: rgb(var(--color-primary-neutral-98));
+    --button-color--active: rgb(var(--color-primary-neutral-60));
+    --button-color--disabled: rgba(var(--color-primary-neutral-90), 0.6);
 
-    --button-text-color: rgb(var(--md-ref-palette-neutral-variant10));
-    --button-text-color--disabled: rgba(
-      var(--md-ref-palette-neutral-variant10),
-      0.8
-    );
+    --button-text-color: rgb(var(--color-primary-neutral-10));
+    --button-text-color--disabled: rgba(var(--color-primary-neutral-10), 0.8);
 
-    --button-shadow-color-1: rgba(var(--md-ref-palette-neutral-variant90), 0.3);
-    --button-shadow-color-2: rgba(
-      var(--md-ref-palette-neutral-variant90),
-      0.15
-    );
+    --button-shadow-color-1: rgba(var(--color-primary-neutral-90), 0.3);
+    --button-shadow-color-2: rgba(var(--color-primary-neutral-90), 0.15);
   }
   /* Filled - primary (dark) */
   .button-root.button-filled.button-primary {
-    --button-color: rgb(var(--md-ref-palette-primary80));
-    --button-color--hover: rgb(var(--md-ref-palette-primary95));
-    --button-color--active: rgb(var(--md-ref-palette-primary60));
-    --button-color--disabled: rgba(var(--md-ref-palette-primary80), 0.6);
+    --button-color: rgb(var(--color-primary-80));
+    --button-color--hover: rgb(var(--color-primary-95));
+    --button-color--active: rgb(var(--color-primary-60));
+    --button-color--disabled: rgba(var(--color-primary-80), 0.6);
 
-    --button-text-color: rgb(var(--md-ref-palette-primary10));
-    --button-text-color--disabled: rgba(var(--md-ref-palette-primary10), 0.8);
+    --button-text-color: rgb(var(--color-primary-10));
+    --button-text-color--disabled: rgba(var(--color-primary-10), 0.8);
 
-    --button-shadow-color-1: rgba(var(--md-ref-palette-primary80), 0.3);
-    --button-shadow-color-2: rgba(var(--md-ref-palette-primary80), 0.15);
+    --button-shadow-color-1: rgba(var(--color-primary-80), 0.3);
+    --button-shadow-color-2: rgba(var(--color-primary-80), 0.15);
   }
 }
 

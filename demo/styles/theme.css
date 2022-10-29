@@ -1,0 +1,69 @@
+:root {
+  /* TYPOGRAPHY */
+  --typography-font-family: 'FigtreeVariable', sans-serif;
+
+  /* COLORS */
+
+  /* primary */
+  --color-primary-5: 0, 12, 56;
+  --color-primary-10: 0, 21, 80;
+  --color-primary-15: 0, 30, 103;
+  --color-primary-20: 0, 39, 127;
+  --color-primary-25: 0, 48, 152;
+  --color-primary-30: 0, 58, 178;
+  --color-primary-35: 0, 68, 205;
+  --color-primary-40: 12, 79, 228;
+  --color-primary-45: 39, 93, 241;
+  --color-primary-50: 57, 106, 254;
+  --color-primary-55: 82, 122, 255;
+  --color-primary-60: 104, 137, 255;
+  --color-primary-65: 124, 152, 255;
+  --color-primary-70: 144, 167, 255;
+  --color-primary-75: 163, 181, 255;
+  --color-primary-80: 182, 196, 255;
+  --color-primary-85: 201, 210, 255;
+  --color-primary-90: 220, 225, 255;
+  --color-primary-95: 239, 240, 255;
+
+  /* primary-neutral */
+  --color-primary-neutral-5: 15, 17, 24;
+  --color-primary-neutral-10: 26, 27, 35;
+  --color-primary-neutral-15: 36, 37, 45;
+  --color-primary-neutral-20: 47, 48, 56;
+  --color-primary-neutral-25: 58, 59, 67;
+  --color-primary-neutral-30: 69, 70, 79;
+  --color-primary-neutral-35: 81, 82, 91;
+  --color-primary-neutral-40: 93, 94, 103;
+  --color-primary-neutral-45: 105, 106, 115;
+  --color-primary-neutral-50: 118, 118, 128;
+  --color-primary-neutral-55: 130, 131, 141;
+  --color-primary-neutral-60: 143, 144, 154;
+  --color-primary-neutral-65: 157, 157, 167;
+  --color-primary-neutral-70: 170, 170, 180;
+  --color-primary-neutral-75: 184, 184, 194;
+  --color-primary-neutral-80: 198, 198, 208;
+  --color-primary-neutral-85: 212, 211, 222;
+  --color-primary-neutral-90: 226, 225, 236;
+  --color-primary-neutral-95: 240, 240, 250;
+
+  /* secondary */
+  --color-secondary-5: 22, 16, 0;
+  --color-secondary-10: 35, 27, 0;
+  --color-secondary-15: 47, 37, 0;
+  --color-secondary-20: 60, 47, 0;
+  --color-secondary-25: 73, 58, 0;
+  --color-secondary-30: 86, 69, 0;
+  --color-secondary-35: 100, 80, 0;
+  --color-secondary-40: 114, 92, 0;
+  --color-secondary-45: 127, 104, 14;
+  --color-secondary-50: 141, 117, 28;
+  --color-secondary-55: 154, 130, 41;
+  --color-secondary-60: 168, 143, 53;
+  --color-secondary-65: 182, 156, 65;
+  --color-secondary-70: 197, 169, 76;
+  --color-secondary-75: 211, 183, 88;
+  --color-secondary-80: 226, 196, 100;
+  --color-secondary-85: 240, 210, 113;
+  --color-secondary-90: 255, 224, 126;
+  --color-secondary-95: 255, 240, 200;
+}

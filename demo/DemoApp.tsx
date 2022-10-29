@@ -10,7 +10,8 @@ import { ReactComponent as ChevronRightIcon } from './assets/icons/chevron_right
 // CSS
 import '@fontsource/figtree/variable.css';
 import 'styles/index.css';
-import classes from './index.module.css';
+import './styles/theme.css';
+import classes from './styles/index.module.css';
 
 const buttonsDemo: [ButtonVariant, ButtonColor][] = [
   ['tonal', 'neutral'],
