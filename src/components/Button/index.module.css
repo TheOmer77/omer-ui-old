@@ -77,7 +77,7 @@
 .button-root.button-filled.button-neutral {
   --button-color: rgb(var(--color-primary-neutral-20));
   --button-color--hover: rgb(var(--color-primary-neutral-40));
-  --button-color--active: rgb(var(--color-primary-neutral-0));
+  --button-color--active: rgb(var(--color-primary-neutral-5));
   --button-color--disabled: rgba(var(--color-primary-neutral-20), 0.6);
 
   --button-text-color: rgb(var(--color-primary-neutral-95));
