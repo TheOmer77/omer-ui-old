@@ -3,7 +3,7 @@
   border-radius: 0.5rem;
   border: none;
   font-weight: 500;
-  font-family: var(--md-sys-typescale-body-large-font-family-name);
+  font-family: var(--typography-font-family);
   user-select: none;
 
   display: flex;
