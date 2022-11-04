@@ -1,6 +1,15 @@
+.controls-row,
 .demo-row {
   display: flex;
   flex-direction: row;
+  align-items: center;
+}
+
+.controls-row {
+  gap: 0.5rem;
+}
+
+.demo-row {
   gap: 1rem;
 }
 

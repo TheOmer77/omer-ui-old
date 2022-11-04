@@ -1,11 +1,15 @@
 import { useState } from 'react';
+import classNames from 'classnames';
 
 // Components
-import Button, { ButtonColor, ButtonVariant } from 'components/Button';
+import Button, {
+  ButtonColor,
+  ButtonVariant,
+  ButtonProps,
+} from 'components/Button';
 
 // Icons
 import { ReactComponent as AddIcon } from './assets/icons/add.svg';
-import { ReactComponent as ChevronRightIcon } from './assets/icons/chevron_right.svg';
 
 // CSS
 import '@fontsource/figtree/variable.css';
@@ -21,8 +25,9 @@ const buttonsDemo: [ButtonVariant, ButtonColor][] = [
 ];
 
 const DemoApp = () => {
-  const [startIcon, setStartIcon] = useState(false),
-    [endIcon, setEndIcon] = useState(false);
+  const [buttonIcon, setButtonIcon] = useState<
+    ButtonProps['iconPosition'] | false
+  >(false);
 
   return (
     <>
@@ -33,8 +38,8 @@ const DemoApp = () => {
               variant={variant}
               color={color}
               size='small'
-              startIcon={startIcon && <AddIcon />}
-              endIcon={endIcon && <ChevronRightIcon />}
+              icon={buttonIcon && <AddIcon />}
+              {...(buttonIcon ? { iconPosition: buttonIcon } : {})}
             >
               Button
             </Button>
@@ -42,8 +47,8 @@ const DemoApp = () => {
               variant={variant}
               color={color}
               size='medium'
-              startIcon={startIcon && <AddIcon />}
-              endIcon={endIcon && <ChevronRightIcon />}
+              icon={buttonIcon && <AddIcon />}
+              {...(buttonIcon ? { iconPosition: buttonIcon } : {})}
             >
               Button
             </Button>
@@ -51,8 +56,8 @@ const DemoApp = () => {
               variant={variant}
               color={color}
               size='large'
-              startIcon={startIcon && <AddIcon />}
-              endIcon={endIcon && <ChevronRightIcon />}
+              icon={buttonIcon && <AddIcon />}
+              {...(buttonIcon ? { iconPosition: buttonIcon } : {})}
             >
               Button
             </Button>
@@ -60,8 +65,8 @@ const DemoApp = () => {
               variant={variant}
               color={color}
               size='small'
-              startIcon={startIcon && <AddIcon />}
-              endIcon={endIcon && <ChevronRightIcon />}
+              icon={buttonIcon && <AddIcon />}
+              {...(buttonIcon ? { iconPosition: buttonIcon } : {})}
               disabled
             >
               Button
@@ -70,8 +75,8 @@ const DemoApp = () => {
               variant={variant}
               color={color}
               size='medium'
-              startIcon={startIcon && <AddIcon />}
-              endIcon={endIcon && <ChevronRightIcon />}
+              icon={buttonIcon && <AddIcon />}
+              {...(buttonIcon ? { iconPosition: buttonIcon } : {})}
               disabled
             >
               Button
@@ -80,8 +85,8 @@ const DemoApp = () => {
               variant={variant}
               color={color}
               size='large'
-              startIcon={startIcon && <AddIcon />}
-              endIcon={endIcon && <ChevronRightIcon />}
+              icon={buttonIcon && <AddIcon />}
+              {...(buttonIcon ? { iconPosition: buttonIcon } : {})}
               disabled
             >
               Button
@@ -90,27 +95,40 @@ const DemoApp = () => {
         ))}
       </div>
       {/* TEMPORARY CONTROLS */}
-      <div className={classes['margin-top']}>
-        <div className={classes['demo-row']}>
-          <input
-            id='buttonsStartIcon'
-            name='buttonsStartIcon'
-            type='checkbox'
-            checked={startIcon}
-            onChange={e => setStartIcon(e.target.checked)}
-          />
-          <label htmlFor='buttonsStartIcon'>Start icon</label>
-        </div>
-        <div className={classes['demo-row']}>
-          <input
-            id='buttonsEndIcon'
-            name='buttonsEndIcon'
-            type='checkbox'
-            checked={endIcon}
-            onChange={e => setEndIcon(e.target.checked)}
-          />
-          <label htmlFor='buttonsEndIcon'>End icon</label>
-        </div>
+      <div
+        className={classNames(classes['controls-row'], classes['margin-top'])}
+      >
+        <span>Button icon:</span>
+        <Button
+          color={buttonIcon === false ? 'primary' : 'neutral'}
+          onClick={() => setButtonIcon(false)}
+        >
+          None
+        </Button>
+        <Button
+          color={buttonIcon === 'start' ? 'primary' : 'neutral'}
+          onClick={() => setButtonIcon('start')}
+        >
+          Start
+        </Button>
+        <Button
+          color={buttonIcon === 'end' ? 'primary' : 'neutral'}
+          onClick={() => setButtonIcon('end')}
+        >
+          End
+        </Button>
+        <Button
+          color={buttonIcon === 'top' ? 'primary' : 'neutral'}
+          onClick={() => setButtonIcon('top')}
+        >
+          Top
+        </Button>
+        <Button
+          color={buttonIcon === 'bottom' ? 'primary' : 'neutral'}
+          onClick={() => setButtonIcon('bottom')}
+        >
+          Bottom
+        </Button>
       </div>
     </>
   );
