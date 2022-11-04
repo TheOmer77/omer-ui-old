@@ -97,9 +97,9 @@
     --color-primary-contrast: var(--color-primary-5);
 
     /* primary-neutral */
-    --color-primary-neutral-main: var(--color-primary-neutral-80);
-    --color-primary-neutral-light: var(--color-primary-neutral-95);
-    --color-primary-neutral-dark: var(--color-primary-neutral-65);
+    --color-primary-neutral-main: var(--color-primary-neutral-85);
+    --color-primary-neutral-light: var(--color-primary-neutral-98);
+    --color-primary-neutral-dark: var(--color-primary-neutral-70);
     --color-primary-neutral-contrast: var(--color-primary-neutral-5);
 
     /* secondary */
