@@ -1,19 +1,49 @@
-.controls-row,
-.demo-row {
-  display: flex;
+body {
+  margin: 0;
+}
+
+.demo {
+  display: grid;
+  grid-template-columns: 1fr;
   flex-direction: row;
-  align-items: center;
-}
-
-.controls-row {
-  gap: 0.5rem;
-}
-
-.demo-row {
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 1rem;
   gap: 1rem;
 }
 
-.demo-column {
+.demo .demo-controls,
+.demo .demo-components {
+}
+
+.demo .demo-controls .demo-controls-label {
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+  color: rgba(var(--color-primary-neutral-5), 0.85);
+  user-select: none;
+}
+
+.demo .demo-controls .demo-controls-row,
+.demo .demo-components {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow-x: auto;
+}
+
+.demo .demo-controls .demo-controls-row {
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.demo .demo-components {
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid rgb(var(--color-primary-neutral-85));
+  border-radius: 1rem;
+}
+
+.demo .demo-column {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -21,6 +51,24 @@
   gap: 1rem;
 }
 
-.margin-top {
-  margin-top: 1rem;
+@media (min-width: 1024px) {
+  .demo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1440px) {
+  .demo {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .demo .demo-controls .demo-controls-label {
+    color: rgba(var(--color-primary-neutral-98), 0.85);
+  }
+
+  .demo .demo-components {
+    border: 1px solid rgb(var(--color-primary-neutral-20));
+  }
 }

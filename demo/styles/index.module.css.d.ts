@@ -1,8 +1,10 @@
 declare const styles: {
-  readonly "controls-row": string;
-  readonly "demo-row": string;
+  readonly "demo": string;
+  readonly "demo-controls": string;
+  readonly "demo-components": string;
+  readonly "demo-controls-label": string;
+  readonly "demo-controls-row": string;
   readonly "demo-column": string;
-  readonly "margin-top": string;
 };
 export = styles;
 
