@@ -24,8 +24,8 @@ export interface ButtonProps
   color?: ButtonColor;
   variant?: ButtonVariant;
   size?: ButtonSize;
-  startIcon?: ReactNode;
-  endIcon?: ReactNode;
+  icon?: ReactNode;
+  iconPosition?: 'start' | 'end' | 'top' | 'bottom';
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
@@ -34,8 +34,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       color = 'neutral',
       variant = 'tonal',
       size = 'medium',
-      startIcon,
-      endIcon,
+      icon,
+      iconPosition = 'start',
       className,
       children,
       ...props
@@ -58,32 +58,42 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             : size === 'large'
             ? classes['button-large']
             : classes['button-medium'],
+          ['top', 'bottom'].includes(iconPosition) &&
+            classes['button-vertical'],
           className
         )}
         {...props}
       >
-        {isValidElement(startIcon) &&
+        {['start', 'top'].includes(iconPosition) &&
+          isValidElement(icon) &&
           cloneElement(
-            startIcon as ReactElement<
+            icon as ReactElement<
               DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>
             >,
             {
               className: classNames(
-                startIcon.props?.className,
-                classes['button-start-icon']
+                icon.props?.className,
+                classes['button-icon'],
+                iconPosition === 'top'
+                  ? classes['button-icon-start']
+                  : classes['button-icon-start']
               ),
             }
           )}
         {children}
-        {isValidElement(endIcon) &&
+        {['end', 'bottom'].includes(iconPosition) &&
+          isValidElement(icon) &&
           cloneElement(
-            endIcon as ReactElement<
+            icon as ReactElement<
               DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>
             >,
             {
               className: classNames(
-                endIcon.props?.className,
-                classes['button-end-icon']
+                icon.props?.className,
+                classes['button-icon'],
+                iconPosition === 'bottom'
+                  ? classes['button-icon-end']
+                  : classes['button-icon-end']
               ),
             }
           )}
