@@ -55,13 +55,13 @@
 
 /* Tonal - neutral */
 .button-root.button-tonal.button-neutral {
-  --button-color: var(--color-primary-neutral-light), 0.2;
-  --button-color--hover: var(--color-primary-neutral-main), 0.3;
-  --button-color--active: var(--color-primary-neutral-main), 0.45;
+  --button-color: var(--color-primary-neutral-light), 0.15;
+  --button-color--hover: var(--color-primary-neutral-main), 0.25;
+  --button-color--active: var(--color-primary-neutral-main), 0.4;
   --button-color--disabled: var(--color-primary-neutral-light), 0.1;
 
-  --button-text-color: var(--color-primary-neutral-main);
-  --button-text-color--disabled: var(--color-primary-neutral-main), 0.4;
+  --button-text-color: var(--color-primary-neutral-dark);
+  --button-text-color--disabled: var(--color-primary-neutral-dark), 0.4;
 }
 /* Tonal - primary */
 .button-root.button-tonal.button-primary {
@@ -97,13 +97,13 @@
 @media (prefers-color-scheme: dark) {
   /* Tonal - neutral (dark) */
   .button-root.button-tonal.button-neutral {
-    --button-color: var(--color-primary-neutral-dark), 0.2;
-    --button-color--hover: var(--color-primary-neutral-main), 0.3;
-    --button-color--active: var(--color-primary-neutral-main), 0.45;
+    --button-color: var(--color-primary-neutral-dark), 0.15;
+    --button-color--hover: var(--color-primary-neutral-main), 0.25;
+    --button-color--active: var(--color-primary-neutral-main), 0.4;
     --button-color--disabled: var(--color-primary-neutral-dark), 0.1;
 
-    --button-text-color: var(--color-primary-neutral-main);
-    --button-text-color--disabled: var(--color-primary-neutral-main), 0.4;
+    --button-text-color: var(--color-primary-neutral-light);
+    --button-text-color--disabled: var(--color-primary-neutral-light), 0.4;
   }
   /* Tonal - primary (dark) */
   .button-root.button-tonal.button-primary {
