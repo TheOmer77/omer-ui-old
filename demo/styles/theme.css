@@ -24,6 +24,7 @@
   --color-primary-85: 201, 210, 255;
   --color-primary-90: 220, 225, 255;
   --color-primary-95: 239, 240, 255;
+  --color-primary-98: 250, 248, 255;
 
   --color-primary-main: var(--color-primary-40);
   --color-primary-light: var(--color-primary-55);
@@ -50,6 +51,7 @@
   --color-primary-neutral-85: 212, 211, 222;
   --color-primary-neutral-90: 226, 225, 236;
   --color-primary-neutral-95: 240, 240, 250;
+  --color-primary-neutral-98: 250, 248, 255;
 
   --color-primary-neutral-main: var(--color-primary-neutral-20);
   --color-primary-neutral-light: var(--color-primary-neutral-35);
@@ -76,6 +78,7 @@
   --color-secondary-85: 240, 210, 113;
   --color-secondary-90: 255, 224, 126;
   --color-secondary-95: 255, 240, 200;
+  --color-secondary-98: 255, 248, 240;
 
   --color-secondary-main: var(--color-secondary-40);
   --color-secondary-light: var(--color-secondary-55);
