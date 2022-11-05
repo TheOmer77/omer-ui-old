@@ -3,8 +3,8 @@ import { useState } from 'react';
 // Components
 import Button, {
   ButtonColor,
+  ButtonIconPosition,
   ButtonVariant,
-  ButtonProps,
 } from 'components/Button';
 
 // Icons
@@ -25,9 +25,9 @@ const buttonsDemo: [ButtonVariant, ButtonColor][] = [
 ];
 
 const App = () => {
-  const [buttonIcon, setButtonIcon] = useState<
-    ButtonProps['iconPosition'] | false
-  >(false);
+  const [buttonIcon, setButtonIcon] = useState<ButtonIconPosition | false>(
+    false
+  );
 
   return (
     <Demo
