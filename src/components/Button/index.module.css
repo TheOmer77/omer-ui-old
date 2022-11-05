@@ -79,6 +79,16 @@
   --button-text-color: var(--color-primary-main);
   --button-text-color--disabled: var(--color-primary-main), 0.4;
 }
+/* Tonal - secondary */
+.button-root.button-tonal.button-secondary {
+  --button-color: var(--color-secondary-light), 0.2;
+  --button-color--hover: var(--color-secondary-main), 0.3;
+  --button-color--active: var(--color-secondary-main), 0.45;
+  --button-color--disabled: var(--color-secondary-light), 0.1;
+
+  --button-text-color: var(--color-secondary-main);
+  --button-text-color--disabled: var(--color-secondary-main), 0.4;
+}
 /* Filled - neutral */
 .button-root.button-filled.button-neutral {
   --button-color: var(--color-primary-neutral-main);
@@ -98,6 +108,16 @@
 
   --button-text-color: var(--color-primary-contrast);
   --button-text-color--disabled: var(--color-primary-contrast), 0.8;
+}
+/* Filled - secondary */
+.button-root.button-filled.button-secondary {
+  --button-color: var(--color-secondary-main);
+  --button-color--hover: var(--color-secondary-light);
+  --button-color--active: var(--color-secondary-dark);
+  --button-color--disabled: var(--color-secondary-main), 0.6;
+
+  --button-text-color: var(--color-secondary-contrast);
+  --button-text-color--disabled: var(--color-secondary-contrast), 0.8;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -120,6 +140,16 @@
 
     --button-text-color: var(--color-primary-main);
     --button-text-color--disabled: var(--color-primary-main), 0.4;
+  }
+  /* Tonal - secondary (dark) */
+  .button-root.button-tonal.button-secondary {
+    --button-color: var(--color-secondary-dark), 0.2;
+    --button-color--hover: var(--color-secondary-main), 0.3;
+    --button-color--active: var(--color-secondary-main), 0.45;
+    --button-color--disabled: var(--color-secondary-dark), 0.1;
+
+    --button-text-color: var(--color-secondary-main);
+    --button-text-color--disabled: var(--color-secondary-main), 0.4;
   }
 }
 
