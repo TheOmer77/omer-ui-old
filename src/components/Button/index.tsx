@@ -15,6 +15,7 @@ import classes from './index.module.css';
 export type ButtonColor = 'primary' | 'neutral';
 export type ButtonVariant = 'tonal' | 'filled';
 export type ButtonSize = 'small' | 'medium' | 'large';
+export type ButtonIconPosition = 'start' | 'end' | 'top' | 'bottom';
 
 export interface ButtonProps
   extends DetailedHTMLProps<
@@ -25,7 +26,7 @@ export interface ButtonProps
   variant?: ButtonVariant;
   size?: ButtonSize;
   icon?: ReactNode;
-  iconPosition?: 'start' | 'end' | 'top' | 'bottom';
+  iconPosition?: ButtonIconPosition;
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
