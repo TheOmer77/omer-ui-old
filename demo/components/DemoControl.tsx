@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import classes from '../styles/index.module.css';
+import classes from './index.module.css';
 
 export interface DemoControlProps {
   id: string;

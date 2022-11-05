@@ -1,6 +1,6 @@
 import DemoControl, { DemoControlProps } from './DemoControl';
 
-import classes from '../styles/index.module.css';
+import classes from './index.module.css';
 
 const DemoControls = ({ controls }: { controls: DemoControlProps[] }) => {
   return (
