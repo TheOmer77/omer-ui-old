@@ -12,7 +12,7 @@ import classNames from 'classnames';
 
 import classes from './index.module.css';
 
-export type ButtonColor = 'neutral' | 'primary' | 'secondary';
+export type ButtonColor = 'neutral' | 'primary' | 'secondary' | 'error';
 export type ButtonVariant = 'tonal' | 'filled';
 export type ButtonSize = 'small' | 'medium' | 'large';
 export type ButtonIconPosition = 'start' | 'end';
@@ -52,6 +52,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             ? classes['button-primary']
             : color === 'secondary'
             ? classes['button-secondary']
+            : color === 'error'
+            ? classes['button-error']
             : classes['button-neutral'],
           variant === 'filled'
             ? classes['button-filled']
