@@ -150,7 +150,7 @@ const ButtonDemo = () => {
       <h2>Disabled buttons</h2>
       <DemoComponents>
         {buttonVariants.map(variant =>
-          buttonColors.map(color => (
+          buttonColors.slice(0, 2).map(color => (
             <Button
               key={`${variant}-${color}`}
               variant={variant}
