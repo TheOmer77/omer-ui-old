@@ -15,7 +15,7 @@ import classes from './index.module.css';
 export type ButtonColor = 'neutral' | 'primary' | 'secondary';
 export type ButtonVariant = 'tonal' | 'filled';
 export type ButtonSize = 'small' | 'medium' | 'large';
-export type ButtonIconPosition = 'start' | 'end' | 'top' | 'bottom';
+export type ButtonIconPosition = 'start' | 'end';
 
 export interface ButtonProps
   extends DetailedHTMLProps<
@@ -61,13 +61,11 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             : size === 'large'
             ? classes['button-large']
             : classes['button-medium'],
-          ['top', 'bottom'].includes(iconPosition) &&
-            classes['button-vertical'],
           className
         )}
         {...props}
       >
-        {['start', 'top'].includes(iconPosition) &&
+        {iconPosition === 'start' &&
           isValidElement(icon) &&
           cloneElement(
             icon as ReactElement<
@@ -77,14 +75,12 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
               className: classNames(
                 icon.props?.className,
                 classes['button-icon'],
-                iconPosition === 'top'
-                  ? classes['button-icon-start']
-                  : classes['button-icon-start']
+                classes['button-icon-start']
               ),
             }
           )}
         {children}
-        {['end', 'bottom'].includes(iconPosition) &&
+        {iconPosition === 'end' &&
           isValidElement(icon) &&
           cloneElement(
             icon as ReactElement<
@@ -94,9 +90,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
               className: classNames(
                 icon.props?.className,
                 classes['button-icon'],
-                iconPosition === 'bottom'
-                  ? classes['button-icon-end']
-                  : classes['button-icon-end']
+                classes['button-icon-end']
               ),
             }
           )}

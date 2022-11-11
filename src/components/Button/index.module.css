@@ -53,10 +53,6 @@
   }
 }
 
-.button-root.button-vertical {
-  flex-direction: column;
-}
-
 /* VARIANT COLORS */
 
 /* Tonal - neutral */
@@ -159,24 +155,15 @@
   padding: 0 1rem;
   font-size: 1rem;
 }
-.button-root.button-small.button-vertical {
-  height: 3.375rem;
-}
 .button-root.button-medium {
   height: 2.25rem;
   padding: 0 1.125rem;
   font-size: 1.125rem;
 }
-.button-root.button-medium.button-vertical {
-  height: 3.75rem;
-}
 .button-root.button-large {
   height: 2.5rem;
   padding: 0 1.25rem;
   font-size: 1.25rem;
-}
-.button-root.button-large.button-vertical {
-  height: 4.075rem;
 }
 
 /* ICON */
@@ -205,15 +192,4 @@
 [dir='rtl'] .button-root .button-icon.button-icon-start {
   margin-left: 0.25rem;
   margin-right: 0;
-}
-.button-root.button-vertical .button-icon.button-icon-start,
-.button-root.button-vertical .button-icon.button-icon-end {
-  margin-left: 0;
-  margin-right: 0;
-}
-.button-root.button-vertical .button-icon.button-icon-start {
-  margin-bottom: 0.25rem;
-}
-.button-root.button-vertical .button-icon.button-icon-end {
-  margin-top: 0.25rem;
 }

@@ -1,7 +1,6 @@
 declare const styles: {
   readonly "button-root": string;
   readonly "button-filled": string;
-  readonly "button-vertical": string;
   readonly "button-tonal": string;
   readonly "button-neutral": string;
   readonly "button-primary": string;
