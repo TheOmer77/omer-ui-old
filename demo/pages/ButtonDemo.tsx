@@ -14,7 +14,7 @@ import DemoComponents from '../components/DemoComponents';
 import { ReactComponent as AddIcon } from '../assets/icons/add.svg';
 
 const buttonColors: ButtonColor[] = ['neutral', 'primary', 'secondary'],
-  buttonIconPositions: ButtonIconPosition[] = ['start', 'end', 'top', 'bottom'],
+  buttonIconPositions: ButtonIconPosition[] = ['start', 'end'],
   buttonSizes: ButtonSize[] = ['small', 'medium', 'large'],
   buttonVariants: ButtonVariant[] = ['tonal', 'filled'];
 
