@@ -84,6 +84,33 @@
   --color-secondary-light: var(--color-secondary-55);
   --color-secondary-dark: var(--color-secondary-25);
   --color-secondary-contrast: var(--color-secondary-95);
+
+  /* error */
+  --color-error-5: 45, 0, 1;
+  --color-error-10: 65, 0, 2;
+  --color-error-15: 84, 0, 3;
+  --color-error-20: 105, 0, 4;
+  --color-error-25: 126, 0, 6;
+  --color-error-30: 143, 15, 16;
+  --color-error-35: 160, 30, 26;
+  --color-error-40: 177, 43, 36;
+  --color-error-45: 195, 56, 47;
+  --color-error-50: 212, 68, 58;
+  --color-error-55: 229, 80, 69;
+  --color-error-60: 247, 93, 80;
+  --color-error-65: 255, 113, 99;
+  --color-error-70: 255, 137, 124;
+  --color-error-75: 255, 159, 148;
+  --color-error-80: 255, 180, 170;
+  --color-error-85: 255, 199, 192;
+  --color-error-90: 255, 218, 213;
+  --color-error-95: 255, 237, 234;
+  --color-error-98: 255, 248, 247;
+
+  --color-error-main: var(--color-error-40);
+  --color-error-light: var(--color-error-55);
+  --color-error-dark: var(--color-error-25);
+  --color-error-contrast: var(--color-error-95);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -107,5 +134,11 @@
     --color-secondary-light: var(--color-secondary-95);
     --color-secondary-dark: var(--color-secondary-65);
     --color-secondary-contrast: var(--color-secondary-5);
+
+    /* error */
+    --color-error-main: var(--color-error-80);
+    --color-error-light: var(--color-error-95);
+    --color-error-dark: var(--color-error-65);
+    --color-error-contrast: var(--color-error-5);
   }
 }
