@@ -21,7 +21,7 @@ const buttonColors: ButtonColor[] = [
   ],
   buttonIconPositions: ButtonIconPosition[] = ['start', 'end'],
   buttonSizes: ButtonSize[] = ['small', 'medium', 'large'],
-  buttonVariants: ButtonVariant[] = ['tonal', 'filled'];
+  buttonVariants: ButtonVariant[] = ['text', 'tonal', 'filled'];
 
 const ButtonDemo = () => {
   const [color, setColor] = useState<ButtonColor>('neutral'),
