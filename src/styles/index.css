@@ -1,13 +1,13 @@
 body {
-  background-color: rgb(var(--color-primary-neutral-98));
-  color: rgb(var(--color-primary-neutral-5));
+  background-color: rgb(var(--color-neutral-98));
+  color: rgb(var(--color-neutral-5));
 
   font-family: var(--typography-font-family);
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: rgb(var(--color-primary-neutral-5));
-    color: rgb(var(--color-primary-neutral-98));
+    background-color: rgb(var(--color-neutral-5));
+    color: rgb(var(--color-neutral-98));
   }
 }
