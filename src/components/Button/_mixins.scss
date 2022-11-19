@@ -21,14 +21,14 @@
   &.button-text.button-#{$color} {
     @if ($color == neutral) {
       --button-color: var(--color-#{$color}-main), 0;
-      --button-color--hover: var(--color-#{$color}-main), 0.15;
+      --button-color--hover: var(--color-#{$color}-main), 0.1;
       --button-color--active: var(--color-#{$color}-main), 0.25;
 
       --button-text-color: var(--color-#{$color}-dark);
       --button-text-color--disabled: var(--color-#{$color}-dark), 0.4;
     } @else {
       --button-color: var(--color-#{$color}-main), 0;
-      --button-color--hover: var(--color-#{$color}-main), 0.2;
+      --button-color--hover: var(--color-#{$color}-main), 0.15;
       --button-color--active: var(--color-#{$color}-main), 0.3;
 
       --button-text-color: var(--color-#{$color}-main);
