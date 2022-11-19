@@ -31,32 +31,32 @@
   --color-primary-dark: var(--color-primary-25);
   --color-primary-contrast: var(--color-primary-95);
 
-  /* primary-neutral */
-  --color-primary-neutral-5: 15, 17, 24;
-  --color-primary-neutral-10: 26, 27, 35;
-  --color-primary-neutral-15: 36, 37, 45;
-  --color-primary-neutral-20: 47, 48, 56;
-  --color-primary-neutral-25: 58, 59, 67;
-  --color-primary-neutral-30: 69, 70, 79;
-  --color-primary-neutral-35: 81, 82, 91;
-  --color-primary-neutral-40: 93, 94, 103;
-  --color-primary-neutral-45: 105, 106, 115;
-  --color-primary-neutral-50: 118, 118, 128;
-  --color-primary-neutral-55: 130, 131, 141;
-  --color-primary-neutral-60: 143, 144, 154;
-  --color-primary-neutral-65: 157, 157, 167;
-  --color-primary-neutral-70: 170, 170, 180;
-  --color-primary-neutral-75: 184, 184, 194;
-  --color-primary-neutral-80: 198, 198, 208;
-  --color-primary-neutral-85: 212, 211, 222;
-  --color-primary-neutral-90: 226, 225, 236;
-  --color-primary-neutral-95: 240, 240, 250;
-  --color-primary-neutral-98: 250, 248, 255;
+  /* neutral */
+  --color-neutral-5: 15, 17, 24;
+  --color-neutral-10: 26, 27, 35;
+  --color-neutral-15: 36, 37, 45;
+  --color-neutral-20: 47, 48, 56;
+  --color-neutral-25: 58, 59, 67;
+  --color-neutral-30: 69, 70, 79;
+  --color-neutral-35: 81, 82, 91;
+  --color-neutral-40: 93, 94, 103;
+  --color-neutral-45: 105, 106, 115;
+  --color-neutral-50: 118, 118, 128;
+  --color-neutral-55: 130, 131, 141;
+  --color-neutral-60: 143, 144, 154;
+  --color-neutral-65: 157, 157, 167;
+  --color-neutral-70: 170, 170, 180;
+  --color-neutral-75: 184, 184, 194;
+  --color-neutral-80: 198, 198, 208;
+  --color-neutral-85: 212, 211, 222;
+  --color-neutral-90: 226, 225, 236;
+  --color-neutral-95: 240, 240, 250;
+  --color-neutral-98: 250, 248, 255;
 
-  --color-primary-neutral-main: var(--color-primary-neutral-20);
-  --color-primary-neutral-light: var(--color-primary-neutral-35);
-  --color-primary-neutral-dark: var(--color-primary-neutral-5);
-  --color-primary-neutral-contrast: var(--color-primary-neutral-95);
+  --color-neutral-main: var(--color-neutral-20);
+  --color-neutral-light: var(--color-neutral-35);
+  --color-neutral-dark: var(--color-neutral-5);
+  --color-neutral-contrast: var(--color-neutral-95);
 
   /* secondary */
   --color-secondary-5: 22, 16, 0;
@@ -123,11 +123,11 @@
     --color-primary-dark: var(--color-primary-65);
     --color-primary-contrast: var(--color-primary-5);
 
-    /* primary-neutral */
-    --color-primary-neutral-main: var(--color-primary-neutral-85);
-    --color-primary-neutral-light: var(--color-primary-neutral-98);
-    --color-primary-neutral-dark: var(--color-primary-neutral-70);
-    --color-primary-neutral-contrast: var(--color-primary-neutral-5);
+    /* neutral */
+    --color-neutral-main: var(--color-neutral-85);
+    --color-neutral-light: var(--color-neutral-98);
+    --color-neutral-dark: var(--color-neutral-70);
+    --color-neutral-contrast: var(--color-neutral-5);
 
     /* secondary */
     --color-secondary-main: var(--color-secondary-80);

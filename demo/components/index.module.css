@@ -42,7 +42,7 @@ h3 {
 
 h3,
 .demo .demo-controls .demo-controls-label {
-  color: rgba(var(--color-primary-neutral-5), 0.85);
+  color: rgba(var(--color-neutral-5), 0.85);
 }
 
 .demo {
@@ -56,7 +56,7 @@ h3,
 .demo .demo-controls {
   height: calc(100vh - 35rem);
   overflow-y: auto;
-  background-color: rgb(var(--color-primary-neutral-95));
+  background-color: rgb(var(--color-neutral-95));
   padding: 1rem;
 }
 
@@ -92,7 +92,7 @@ h3,
 .demo-components {
   gap: 1rem;
   padding: 1rem;
-  border: 1px solid rgb(var(--color-primary-neutral-85));
+  border: 1px solid rgb(var(--color-neutral-85));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -129,15 +129,15 @@ h3,
 
 @media (prefers-color-scheme: dark) {
   .demo .demo-controls {
-    background-color: rgb(var(--color-primary-neutral-10));
+    background-color: rgb(var(--color-neutral-10));
   }
 
   h3,
   .demo .demo-controls .demo-controls-label {
-    color: rgba(var(--color-primary-neutral-98), 0.85);
+    color: rgba(var(--color-neutral-98), 0.85);
   }
 
   .demo-components {
-    border: 1px solid rgb(var(--color-primary-neutral-20));
+    border: 1px solid rgb(var(--color-neutral-20));
   }
 }
