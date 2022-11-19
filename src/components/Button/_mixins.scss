@@ -34,6 +34,13 @@
       --button-text-color: var(--color-#{$color}-main);
       --button-text-color--disabled: var(--color-#{$color}-main), 0.4;
     }
+
+    @media (prefers-color-scheme: dark) {
+      @if ($color == neutral) {
+        --button-text-color: var(--color-#{$color}-light);
+        --button-text-color--disabled: var(--color-#{$color}-light), 0.4;
+      }
+    }
   }
 }
 
@@ -55,6 +62,18 @@
 
       --button-text-color: var(--color-#{$color}-main);
       --button-text-color--disabled: var(--color-#{$color}-main), 0.4;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      @if ($color == neutral) {
+        --button-color: var(--color-#{$color}-dark), 0.15;
+        --button-color--disabled: var(--color-#{$color}-dark), 0.1;
+        --button-text-color: var(--color-#{$color}-light);
+        --button-text-color--disabled: var(--color-#{$color}-light), 0.4;
+      } @else {
+        --button-color: var(--color-#{$color}-dark), 0.2;
+        --button-color--disabled: var(--color-#{$color}-dark), 0.1;
+      }
     }
   }
 }
