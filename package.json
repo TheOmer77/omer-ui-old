@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "scss-types": "typed-scss-modules src -e default -n kebab"
   },
   "dependencies": {
     "@fontsource/figtree": "^4.5.1",
@@ -30,6 +31,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^2.7.1",
     "sass": "^1.56.1",
+    "typed-scss-modules": "^7.0.1",
     "typescript": "^4.9.3",
     "vite": "^3.2.4",
     "vite-plugin-svgr": "^2.2.2",
