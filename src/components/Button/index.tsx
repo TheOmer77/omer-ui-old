@@ -13,7 +13,7 @@ import classNames from 'classnames';
 import classes from './index.module.scss';
 
 export type ButtonColor = 'neutral' | 'primary' | 'secondary' | 'error';
-export type ButtonVariant = 'text' | 'tonal' | 'filled';
+export type ButtonVariant = 'text' | 'tonal' | 'elevated' | 'filled';
 export type ButtonSize = 'small' | 'medium' | 'large';
 export type ButtonIconPosition = 'start' | 'end';
 
@@ -57,6 +57,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             : classes['button-neutral'],
           variant === 'filled'
             ? classes['button-filled']
+            : variant === 'elevated'
+            ? classes['button-elevated']
             : variant === 'text'
             ? classes['button-text']
             : classes['button-tonal'],

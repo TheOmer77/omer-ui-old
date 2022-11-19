@@ -1,22 +1,65 @@
 @use 'constants' as *;
 
-@mixin shadows {
-  &.button-filled:not(:disabled) {
-    box-shadow: $button-shadow;
+// UTILS
+// TODO: Maybe use this for text & tonal buttons, instead of giving the buttons hover & active colors
+@mixin state-layer {
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background-color: rgba(var(--button-state-layer-color), 0);
+    transition: inherit;
   }
-  &.button-filled:focus-visible {
-    box-shadow: $button-shadow--hover;
+  &:focus-visible::after {
+    outline: none;
+    background-color: rgba(var(--button-state-layer-color), 0.15);
   }
-  &.button-filled:active:not(:disabled) {
-    box-shadow: $button-shadow--active;
+  &:active:not(:disabled)::after {
+    background-color: rgba(var(--button-state-layer-color), 0.25);
   }
   @media (hover: hover) {
-    &.button-filled:hover:not(:active):not(:disabled) {
-      box-shadow: $button-shadow--hover;
+    &:hover:not(:active):not(:disabled) {
+      background-color: rgba(var(--button-state-layer-color), 0.15);
     }
   }
 }
 
+// SHADOWS
+@mixin shadows {
+  &.button-elevated:not(:disabled) {
+    box-shadow: $button-elevated-shadow;
+  }
+  &.button-elevated:focus-visible {
+    box-shadow: $button-elevated-shadow--hover;
+  }
+  &.button-elevated:active:not(:disabled) {
+    box-shadow: $button-elevated-shadow--active;
+  }
+  @media (hover: hover) {
+    &.button-elevated:hover:not(:active):not(:disabled) {
+      box-shadow: $button-elevated-shadow--hover;
+    }
+  }
+
+  &.button-filled:not(:disabled) {
+    box-shadow: $button-filled-shadow;
+  }
+  &.button-filled:focus-visible {
+    box-shadow: $button-filled-shadow--hover;
+  }
+  &.button-filled:active:not(:disabled) {
+    box-shadow: $button-filled-shadow--active;
+  }
+  @media (hover: hover) {
+    &.button-filled:hover:not(:active):not(:disabled) {
+      box-shadow: $button-filled-shadow--hover;
+    }
+  }
+}
+
+// VARIANTS
 @mixin variant-text($color) {
   &.button-text.button-#{$color} {
     @if ($color == neutral) {
@@ -78,6 +121,44 @@
   }
 }
 
+@mixin variant-elevated($color) {
+  &.button-elevated.button-#{$color} {
+    @if ($color == neutral) {
+      --button-color: var(--color-#{$color}-98);
+
+      --button-text-color: var(--color-#{$color}-dark);
+      --button-text-color--disabled: var(--color-#{$color}-dark), 0.8;
+    } @else {
+      --button-color: var(--color-#{$color}-95);
+
+      --button-text-color: var(--color-#{$color}-main);
+      --button-text-color--disabled: var(--color-#{$color}-main), 0.8;
+    }
+
+    --button-state-layer-color: var(--color-#{$color}-light);
+    --button-shadow-color: var(--color-#{$color}-main);
+
+    @media (prefers-color-scheme: dark) {
+      @if ($color == neutral) {
+        --button-color: var(--color-#{$color}-5);
+
+        --button-text-color: var(--color-#{$color}-light);
+        --button-text-color--disabled: var(--color-#{$color}-light), 0.8;
+      } @else {
+        --button-color: var(--color-#{$color}-5);
+
+        --button-text-color: var(--color-#{$color}-main);
+        --button-text-color--disabled: var(--color-#{$color}-main), 0.8;
+      }
+
+      --button-state-layer-color: var(--color-#{$color}-dark);
+      --button-shadow-color: var(--color-#{$color}-dark);
+    }
+
+    @include state-layer;
+  }
+}
+
 @mixin variant-filled($color) {
   &.button-filled.button-#{$color} {
     --button-color: var(--color-#{$color}-main);
@@ -94,10 +175,12 @@
   @each $color in $colors {
     @include variant-text($color);
     @include variant-tonal($color);
+    @include variant-elevated($color);
     @include variant-filled($color);
   }
 }
 
+// SIZES
 @mixin sizes {
   @each $size, $props in $sizes {
     &.button-#{$size} {
@@ -113,6 +196,7 @@
   }
 }
 
+// ICON
 @mixin icon {
   & .button-icon.button-icon-start,
   [dir='rtl'] & .button-icon.button-icon-end {

@@ -1,4 +1,5 @@
 export type Styles = {
+  'button-elevated': string;
   'button-error': string;
   'button-filled': string;
   'button-icon': string;
