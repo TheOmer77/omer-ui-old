@@ -1,0 +1,29 @@
+$colors: (neutral, primary, secondary, error);
+
+$sizes: (
+  'small': (
+    'height': 2rem,
+    'padding': 1rem,
+    'font-size': 1rem,
+    'icon-size': 1.125rem,
+  ),
+  'medium': (
+    'height': 2.25rem,
+    'padding': 1.125rem,
+    'font-size': 1.125rem,
+    'icon-size': 1.25rem,
+  ),
+  'large': (
+    'height': 2.5rem,
+    'padding': 1.25rem,
+    'font-size': 1.25rem,
+    'icon-size': 1.325rem,
+  ),
+);
+
+$button-shadow: 0px 2px 4px rgba(var(--button-color), 0.3),
+  0px 4px 6px 2px rgba(var(--button-color), 0.15);
+$button-shadow--hover: 0px 2px 5px rgba(var(--button-color--hover), 0.3),
+  0px 6px 8px 3px rgba(var(--button-color--hover), 0.15);
+$button-shadow--active: 0px 2px 3px rgba(var(--button-color--active), 0.3),
+  0px 3px 4px 1px rgba(var(--button-color--active), 0.15);

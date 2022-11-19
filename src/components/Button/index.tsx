@@ -10,7 +10,7 @@ import {
 } from 'react';
 import classNames from 'classnames';
 
-import classes from './index.module.css';
+import classes from './index.module.scss';
 
 export type ButtonColor = 'neutral' | 'primary' | 'secondary' | 'error';
 export type ButtonVariant = 'text' | 'tonal' | 'filled';

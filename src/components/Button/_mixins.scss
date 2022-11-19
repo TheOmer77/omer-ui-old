@@ -1,0 +1,108 @@
+@use 'constants' as *;
+
+@mixin shadows {
+  &.button-filled:not(:disabled) {
+    box-shadow: $button-shadow;
+  }
+  &.button-filled:focus-visible {
+    box-shadow: $button-shadow--hover;
+  }
+  &.button-filled:active:not(:disabled) {
+    box-shadow: $button-shadow--active;
+  }
+  @media (hover: hover) {
+    &.button-filled:hover:not(:active):not(:disabled) {
+      box-shadow: $button-shadow--hover;
+    }
+  }
+}
+
+@mixin variant-text($color) {
+  &.button-text.button-#{$color} {
+    @if ($color == neutral) {
+      --button-color: var(--color-#{$color}-main), 0;
+      --button-color--hover: var(--color-#{$color}-main), 0.15;
+      --button-color--active: var(--color-#{$color}-main), 0.25;
+
+      --button-text-color: var(--color-#{$color}-dark);
+      --button-text-color--disabled: var(--color-#{$color}-dark), 0.4;
+    } @else {
+      --button-color: var(--color-#{$color}-main), 0;
+      --button-color--hover: var(--color-#{$color}-main), 0.2;
+      --button-color--active: var(--color-#{$color}-main), 0.3;
+
+      --button-text-color: var(--color-#{$color}-main);
+      --button-text-color--disabled: var(--color-#{$color}-main), 0.4;
+    }
+  }
+}
+
+@mixin variant-tonal($color) {
+  &.button-tonal.button-#{$color} {
+    @if ($color == neutral) {
+      --button-color: var(--color-#{$color}-light), 0.15;
+      --button-color--hover: var(--color-#{$color}-main), 0.25;
+      --button-color--active: var(--color-#{$color}-main), 0.4;
+      --button-color--disabled: var(--color-#{$color}-light), 0.1;
+
+      --button-text-color: var(--color-#{$color}-dark);
+      --button-text-color--disabled: var(--color-#{$color}-dark), 0.4;
+    } @else {
+      --button-color: var(--color-#{$color}-light), 0.2;
+      --button-color--hover: var(--color-#{$color}-main), 0.3;
+      --button-color--active: var(--color-#{$color}-main), 0.45;
+      --button-color--disabled: var(--color-#{$color}-light), 0.1;
+
+      --button-text-color: var(--color-#{$color}-main);
+      --button-text-color--disabled: var(--color-#{$color}-main), 0.4;
+    }
+  }
+}
+
+@mixin variant-filled($color) {
+  &.button-filled.button-#{$color} {
+    --button-color: var(--color-#{$color}-main);
+    --button-color--hover: var(--color-#{$color}-light);
+    --button-color--active: var(--color-#{$color}-dark);
+    --button-color--disabled: var(--color-#{$color}-main), 0.6;
+
+    --button-text-color: var(--color-#{$color}-contrast);
+    --button-text-color--disabled: var(--color-#{$color}-contrast), 0.8;
+  }
+}
+
+@mixin variants {
+  @each $color in $colors {
+    @include variant-text($color);
+    @include variant-tonal($color);
+    @include variant-filled($color);
+  }
+}
+
+@mixin sizes {
+  @each $size, $props in $sizes {
+    &.button-#{$size} {
+      height: map-get($props, 'height');
+      padding: 0 map-get($props, 'padding');
+      font-size: map-get($props, 'font-size');
+
+      & .button-icon {
+        width: map-get($map: $props, $key: 'icon-size');
+        height: map-get($map: $props, $key: 'icon-size');
+      }
+    }
+  }
+}
+
+@mixin icon {
+  & .button-icon.button-icon-start,
+  [dir='rtl'] & .button-icon.button-icon-end {
+    margin-right: 0.25rem;
+    margin-left: 0;
+  }
+  & .button-icon.button-icon-end,
+  [dir='rtl'] & .button-icon.button-icon-start {
+    margin-left: 0.25rem;
+    margin-right: 0;
+  }
+}
