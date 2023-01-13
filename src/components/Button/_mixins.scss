@@ -73,14 +73,12 @@
       --button-text-color--disabled: var(--color-#{$color}-main), 0.4;
     }
 
-    --button-state-layer-color: var(--color-#{$color}-light);
+    --button-state-layer-color: var(--color-#{$color}-main);
 
     @media (prefers-color-scheme: dark) {
       @if ($color == neutral) {
         --button-text-color: var(--color-#{$color}-light);
         --button-text-color--disabled: var(--color-#{$color}-light), 0.4;
-
-        --button-state-layer-color: var(--color-#{$color}-dark);
       }
     }
 
