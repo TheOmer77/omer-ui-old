@@ -20,7 +20,7 @@
     background-color: rgba(var(--button-state-layer-color), 0.25);
   }
   @media (hover: hover) {
-    &:hover:not(:active):not(:disabled) {
+    &:hover:not(:active):not(:disabled)::after {
       background-color: rgba(var(--button-state-layer-color), 0.15);
     }
   }
