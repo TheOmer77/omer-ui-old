@@ -1,7 +1,6 @@
 @use 'constants' as *;
 
 // UTILS
-// TODO: Maybe use this for tonal buttons, instead of giving the buttons hover & active colors
 @mixin state-layer {
   &::after {
     content: '';
@@ -93,21 +92,19 @@
   &.button-tonal.button-#{$color} {
     @if ($color == neutral) {
       --button-color: var(--color-#{$color}-light), 0.15;
-      --button-color--hover: var(--color-#{$color}-main), 0.25;
-      --button-color--active: var(--color-#{$color}-main), 0.4;
       --button-color--disabled: var(--color-#{$color}-light), 0.1;
 
       --button-text-color: var(--color-#{$color}-dark);
       --button-text-color--disabled: var(--color-#{$color}-dark), 0.4;
     } @else {
       --button-color: var(--color-#{$color}-light), 0.2;
-      --button-color--hover: var(--color-#{$color}-main), 0.3;
-      --button-color--active: var(--color-#{$color}-main), 0.45;
       --button-color--disabled: var(--color-#{$color}-light), 0.1;
 
       --button-text-color: var(--color-#{$color}-main);
       --button-text-color--disabled: var(--color-#{$color}-main), 0.4;
     }
+
+    --button-state-layer-color: var(--color-#{$color}-main);
 
     @media (prefers-color-scheme: dark) {
       @if ($color == neutral) {
@@ -119,7 +116,11 @@
         --button-color: var(--color-#{$color}-dark), 0.2;
         --button-color--disabled: var(--color-#{$color}-dark), 0.1;
       }
+
+      --button-state-layer-color: var(--color-#{$color}-light);
     }
+
+    @include state-layer;
   }
 }
 
