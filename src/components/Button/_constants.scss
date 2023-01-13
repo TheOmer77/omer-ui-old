@@ -21,19 +21,19 @@ $sizes: (
   ),
 );
 
-$button-elevated-shadow: 0px 2px 4px rgba(var(--button-shadow-color), 0.2),
-  0px 4px 6px 2px rgba(var(--button-shadow-color), 0.1);
-$button-elevated-shadow--hover: 0px 2px 5px
+$button-elevated-shadow: 0px 1px 3px rgba(var(--button-shadow-color), 0.2),
+  0px 2px 3px 1px rgba(var(--button-shadow-color), 0.1);
+$button-elevated-shadow--hover: 0px 1px 4px
     rgba(var(--button-shadow-color), 0.2),
-  0px 6px 8px 3px rgba(var(--button-shadow-color), 0.1);
-$button-elevated-shadow--active: 0px 2px 3px
+  0px 3px 4px 2px rgba(var(--button-shadow-color), 0.1);
+$button-elevated-shadow--active: 0px 1px 2px
     rgba(var(--button-shadow-color), 0.2),
-  0px 3px 4px 1px rgba(var(--button-shadow-color), 0.1);
+  0px 1px 2px 1px rgba(var(--button-shadow-color), 0.1);
 
-$button-filled-shadow: 0px 2px 4px rgba(var(--button-color), 0.3),
-  0px 4px 6px 2px rgba(var(--button-color), 0.15);
-$button-filled-shadow--hover: 0px 2px 5px rgba(var(--button-color--hover), 0.3),
-  0px 6px 8px 3px rgba(var(--button-color--hover), 0.15);
-$button-filled-shadow--active: 0px 2px 3px
+$button-filled-shadow: 0px 1px 3px rgba(var(--button-color), 0.3),
+  0px 2px 3px 1px rgba(var(--button-color), 0.15);
+$button-filled-shadow--hover: 0px 1px 4px rgba(var(--button-color--hover), 0.3),
+  0px 3px 4px 2px rgba(var(--button-color--hover), 0.15);
+$button-filled-shadow--active: 0px 1px 2px
     rgba(var(--button-color--active), 0.3),
-  0px 3px 4px 1px rgba(var(--button-color--active), 0.15);
+  0px 1px 2px 1px rgba(var(--button-color--active), 0.15);
