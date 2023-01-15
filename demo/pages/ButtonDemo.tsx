@@ -13,6 +13,7 @@ import type { DemoOption } from '../types';
 
 import { ReactComponent as AddIcon } from '../assets/icons/add.svg';
 
+// TODO: Change to DemoOption<Prop>[]
 const buttonColors: ButtonColor[] = [
     'neutral',
     'primary',
