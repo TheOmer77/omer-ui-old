@@ -29,6 +29,18 @@ export interface ButtonProps
   iconPosition?: ButtonIconPosition;
 }
 
+export interface ButtonClassNameMap {
+  size: Record<ButtonSize, `button-${ButtonSize}`>;
+}
+
+const classNameMap: ButtonClassNameMap = {
+  size: {
+    small: 'button-small',
+    medium: 'button-medium',
+    large: 'button-large',
+  },
+};
+
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
@@ -62,11 +74,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             : variant === 'text'
             ? classes['button-text']
             : classes['button-tonal'],
-          size === 'small'
-            ? classes['button-small']
-            : size === 'large'
-            ? classes['button-large']
-            : classes['button-medium'],
+          classes[classNameMap.size[size]],
           className
         )}
         {...props}
