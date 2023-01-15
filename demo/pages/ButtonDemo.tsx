@@ -1,6 +1,5 @@
 import { Fragment, useState } from 'react';
 
-// Components
 import Button, {
   ButtonColor,
   ButtonIconPosition,
@@ -10,7 +9,8 @@ import Button, {
 import Demo from '../components/Demo';
 import DemoComponents from '../components/DemoComponents';
 
-// Icons
+import type { DemoOption } from '../types';
+
 import { ReactComponent as AddIcon } from '../assets/icons/add.svg';
 
 const buttonColors: ButtonColor[] = [
@@ -20,8 +20,15 @@ const buttonColors: ButtonColor[] = [
     'error',
   ],
   buttonIconPositions: ButtonIconPosition[] = ['start', 'end'],
-  buttonSizes: ButtonSize[] = ['xs', 'sm', 'md', 'lg', 'xl'],
   buttonVariants: ButtonVariant[] = ['text', 'tonal', 'elevated', 'filled'];
+
+const buttonSizes: DemoOption<ButtonSize, { className: string }>[] = [
+  { label: 'Extra small', value: 'xs' },
+  { label: 'Small', value: 'sm' },
+  { label: 'Medium', value: 'md' },
+  { label: 'Large', value: 'lg' },
+  { label: 'Extra large', value: 'xl' },
+];
 
 const ButtonDemo = () => {
   const [color, setColor] = useState<ButtonColor>('neutral'),
@@ -75,13 +82,13 @@ const ButtonDemo = () => {
             label: 'Size',
             component: (
               <>
-                {buttonSizes.map(buttonSize => (
+                {buttonSizes.map(({ label, value }) => (
                   <Button
-                    key={buttonSize}
-                    color={size === buttonSize ? 'primary' : 'neutral'}
-                    onClick={() => setSize(buttonSize)}
+                    key={value}
+                    color={size === value ? 'primary' : 'neutral'}
+                    onClick={() => setSize(value)}
                   >
-                    {`${buttonSize[0].toUpperCase()}${buttonSize.slice(1)}`}
+                    {label}
                   </Button>
                 ))}
               </>
@@ -141,9 +148,9 @@ const ButtonDemo = () => {
       ))}
       <h2>Button sizes</h2>
       <DemoComponents>
-        {buttonSizes.map(size => (
-          <Button key={size} size={size}>
-            {`${size[0].toUpperCase()}${size.slice(1)}`}
+        {buttonSizes.map(({ label, value }) => (
+          <Button key={value} size={value} id={`demo-btn-${value}`}>
+            {label}
           </Button>
         ))}
       </DemoComponents>
