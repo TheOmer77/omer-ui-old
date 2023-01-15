@@ -186,12 +186,12 @@
   @each $size, $props in $sizes {
     &.button-#{$size} {
       height: map-get($props, 'height');
-      padding: 0 map-get($props, 'padding');
+      padding: 0 map-get($props, 'font-size');
       font-size: map-get($props, 'font-size');
 
       & .button-icon {
-        width: map-get($map: $props, $key: 'icon-size');
-        height: map-get($map: $props, $key: 'icon-size');
+        width: calc(map-get($map: $props, $key: 'font-size') + 0.125rem);
+        height: calc(map-get($map: $props, $key: 'font-size') + 0.125rem);
       }
     }
   }

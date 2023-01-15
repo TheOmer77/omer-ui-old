@@ -14,7 +14,7 @@ import classes from './index.module.scss';
 
 export type ButtonColor = 'neutral' | 'primary' | 'secondary' | 'error';
 export type ButtonVariant = 'text' | 'tonal' | 'elevated' | 'filled';
-export type ButtonSize = 'small' | 'medium' | 'large';
+export type ButtonSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 export type ButtonIconPosition = 'start' | 'end';
 
 export interface ButtonProps
@@ -35,9 +35,11 @@ export interface ButtonClassNameMap {
 
 const classNameMap: ButtonClassNameMap = {
   size: {
-    small: 'button-small',
-    medium: 'button-medium',
-    large: 'button-large',
+    xs: 'button-xs',
+    sm: 'button-sm',
+    md: 'button-md',
+    lg: 'button-lg',
+    xl: 'button-xl',
   },
 };
 
@@ -46,7 +48,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     {
       color = 'neutral',
       variant = 'tonal',
-      size = 'medium',
+      size = 'md',
       icon,
       iconPosition = 'start',
       className,

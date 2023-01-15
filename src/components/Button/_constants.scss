@@ -1,23 +1,25 @@
 $colors: (neutral, primary, secondary, error);
 
 $sizes: (
-  'small': (
+  'xs': (
+    'height': 1.5rem,
+    'font-size': 0.625rem,
+  ),
+  'sm': (
     'height': 2rem,
-    'padding': 1rem,
-    'font-size': 1rem,
-    'icon-size': 1.125rem,
+    'font-size': 0.875rem,
   ),
-  'medium': (
-    'height': 2.25rem,
-    'padding': 1.125rem,
-    'font-size': 1.125rem,
-    'icon-size': 1.25rem,
-  ),
-  'large': (
+  'md': (
     'height': 2.5rem,
-    'padding': 1.25rem,
-    'font-size': 1.25rem,
-    'icon-size': 1.325rem,
+    'font-size': 1.125rem,
+  ),
+  'lg': (
+    'height': 3rem,
+    'font-size': 1.375rem,
+  ),
+  'xl': (
+    'height': 3.5rem,
+    'font-size': 1.625rem,
   ),
 );
 
