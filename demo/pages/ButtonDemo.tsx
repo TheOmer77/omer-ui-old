@@ -20,13 +20,13 @@ const buttonColors: ButtonColor[] = [
     'error',
   ],
   buttonIconPositions: ButtonIconPosition[] = ['start', 'end'],
-  buttonSizes: ButtonSize[] = ['small', 'medium', 'large'],
+  buttonSizes: ButtonSize[] = ['xs', 'sm', 'md', 'lg', 'xl'],
   buttonVariants: ButtonVariant[] = ['text', 'tonal', 'elevated', 'filled'];
 
 const ButtonDemo = () => {
   const [color, setColor] = useState<ButtonColor>('neutral'),
     [icon, setIcon] = useState<ButtonIconPosition | false>(false),
-    [size, setSize] = useState<ButtonSize>('medium'),
+    [size, setSize] = useState<ButtonSize>('md'),
     [variant, setVariant] = useState<ButtonVariant>('tonal');
 
   return (
@@ -92,7 +92,7 @@ const ButtonDemo = () => {
             label: 'Icon',
             component: (
               <>
-                {([false, ...buttonIconPositions] as typeof icon[]).map(
+                {([false, ...buttonIconPositions] as (typeof icon)[]).map(
                   buttonIconPos => (
                     <Button
                       key={buttonIconPos || 'none'}
