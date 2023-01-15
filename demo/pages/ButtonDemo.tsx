@@ -23,7 +23,7 @@ const buttonColors: ButtonColor[] = [
   buttonIconPositions: ButtonIconPosition[] = ['start', 'end'],
   buttonVariants: ButtonVariant[] = ['text', 'tonal', 'elevated', 'filled'];
 
-const buttonSizes: DemoOption<ButtonSize, { className: string }>[] = [
+const buttonSizes: DemoOption<ButtonSize>[] = [
   { label: 'Extra small', value: 'xs' },
   { label: 'Small', value: 'sm' },
   { label: 'Medium', value: 'md' },
