@@ -146,14 +146,14 @@
         --button-text-color: var(--color-#{$color}-light);
         --button-text-color--disabled: var(--color-#{$color}-light), 0.8;
       } @else {
-        --button-color: var(--color-#{$color}-5);
+        --button-color: var(--color-#{$color}-10);
 
         --button-text-color: var(--color-#{$color}-main);
         --button-text-color--disabled: var(--color-#{$color}-main), 0.8;
       }
 
       --button-state-layer-color: var(--color-#{$color}-dark);
-      --button-shadow-color: var(--color-#{$color}-40);
+      --button-shadow-color: var(--color-#{$color}-45);
     }
 
     @include state-layer;
