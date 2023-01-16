@@ -13,23 +13,30 @@ import type { DemoOption } from '../types';
 
 import { ReactComponent as AddIcon } from '../assets/icons/add.svg';
 
-// TODO: Change to DemoOption<Prop>[]
-const buttonColors: ButtonColor[] = [
-    'neutral',
-    'primary',
-    'secondary',
-    'error',
-  ],
-  buttonIconPositions: ButtonIconPosition[] = ['start', 'end'],
-  buttonVariants: ButtonVariant[] = ['text', 'tonal', 'elevated', 'filled'];
-
 const buttonSizes: DemoOption<ButtonSize>[] = [
-  { label: 'Extra small', value: 'xs' },
-  { label: 'Small', value: 'sm' },
-  { label: 'Medium', value: 'md' },
-  { label: 'Large', value: 'lg' },
-  { label: 'Extra large', value: 'xl' },
-];
+    { label: 'Extra small', value: 'xs' },
+    { label: 'Small', value: 'sm' },
+    { label: 'Medium', value: 'md' },
+    { label: 'Large', value: 'lg' },
+    { label: 'Extra large', value: 'xl' },
+  ],
+  buttonVariants: DemoOption<ButtonVariant>[] = [
+    { label: 'Text', value: 'text' },
+    { label: 'Tonal', value: 'tonal' },
+    { label: 'Elevated', value: 'elevated' },
+    { label: 'Filled', value: 'filled' },
+  ],
+  buttonColors: DemoOption<ButtonColor>[] = [
+    { label: 'Neutral', value: 'neutral' },
+    { label: 'Primary', value: 'primary' },
+    { label: 'Secondary', value: 'secondary' },
+    { label: 'Error', value: 'error' },
+  ],
+  buttonIconPositions: DemoOption<ButtonIconPosition>[] = [
+    { label: 'Start', value: 'start' },
+    { label: 'End', value: 'end' },
+  ];
+const noneDemoOption: DemoOption<false> = { label: 'None', value: false };
 
 const ButtonDemo = () => {
   const [color, setColor] = useState<ButtonColor>('neutral'),
@@ -47,13 +54,13 @@ const ButtonDemo = () => {
             label: 'Color',
             component: (
               <>
-                {buttonColors.map(buttonColor => (
+                {buttonColors.map(({ label, value }) => (
                   <Button
-                    key={buttonColor}
-                    color={color === buttonColor ? 'primary' : 'neutral'}
-                    onClick={() => setColor(buttonColor)}
+                    key={value}
+                    color={color === value ? 'primary' : 'neutral'}
+                    onClick={() => setColor(value)}
                   >
-                    {`${buttonColor[0].toUpperCase()}${buttonColor.slice(1)}`}
+                    {label}
                   </Button>
                 ))}
               </>
@@ -64,15 +71,13 @@ const ButtonDemo = () => {
             label: 'Variant',
             component: (
               <>
-                {buttonVariants.map(buttonVariant => (
+                {buttonVariants.map(({ label, value }) => (
                   <Button
-                    key={buttonVariant}
-                    color={variant === buttonVariant ? 'primary' : 'neutral'}
-                    onClick={() => setVariant(buttonVariant)}
+                    key={value}
+                    color={variant === value ? 'primary' : 'neutral'}
+                    onClick={() => setVariant(value)}
                   >
-                    {`${buttonVariant[0].toUpperCase()}${buttonVariant.slice(
-                      1
-                    )}`}
+                    {label}
                   </Button>
                 ))}
               </>
@@ -100,18 +105,14 @@ const ButtonDemo = () => {
             label: 'Icon',
             component: (
               <>
-                {([false, ...buttonIconPositions] as (typeof icon)[]).map(
-                  buttonIconPos => (
+                {[noneDemoOption, ...buttonIconPositions].map(
+                  ({ label, value }) => (
                     <Button
-                      key={buttonIconPos || 'none'}
-                      color={icon === buttonIconPos ? 'primary' : 'neutral'}
-                      onClick={() => setIcon(buttonIconPos)}
+                      key={value || 'none'}
+                      color={icon === value ? 'primary' : 'neutral'}
+                      onClick={() => setIcon(value)}
                     >
-                      {buttonIconPos
-                        ? `${buttonIconPos[0].toUpperCase()}${buttonIconPos.slice(
-                            1
-                          )}`
-                        : 'None'}
+                      {label}
                     </Button>
                   )
                 )}
@@ -131,17 +132,18 @@ const ButtonDemo = () => {
         </Button>
       </Demo>
       <h2>Button variants & colors</h2>
-      {buttonVariants.map(variant => (
+      {buttonVariants.map(({ label: variantLabel, value: variant }) => (
         <Fragment key={variant}>
-          <h3>{`${variant[0].toUpperCase()}${variant.slice(1)} button`}</h3>
+          <h3>{variantLabel}</h3>
           <DemoComponents>
-            {buttonColors.map(color => (
+            {buttonColors.map(({ label: colorLabel, value: color }) => (
               <Button
                 key={`${variant}-${color}`}
+                id={`demo-btn-${variant}-${color}`}
                 variant={variant}
                 color={color}
               >
-                {`${color[0].toUpperCase()}${color.slice(1)}`}
+                {colorLabel}
               </Button>
             ))}
           </DemoComponents>
@@ -157,10 +159,11 @@ const ButtonDemo = () => {
       </DemoComponents>
       <h2>Disabled buttons</h2>
       <DemoComponents>
-        {buttonVariants.map(variant =>
-          buttonColors.slice(0, 2).map(color => (
+        {buttonVariants.map(({ value: variant }) =>
+          buttonColors.slice(0, 2).map(({ value: color }) => (
             <Button
               key={`${variant}-${color}`}
+              id={`demo-btn-${variant}-${color}-disabled`}
               variant={variant}
               color={color}
               disabled
@@ -172,13 +175,14 @@ const ButtonDemo = () => {
       </DemoComponents>
       <h2>Buttons with icons</h2>
       <DemoComponents>
-        {buttonIconPositions.map(iconPosition => (
+        {buttonIconPositions.map(({ label, value }) => (
           <Button
-            key={iconPosition}
+            key={value}
+            id={`demo-btn-icon-${value}`}
             icon={<AddIcon />}
-            iconPosition={iconPosition}
+            iconPosition={value}
           >
-            {`${iconPosition[0].toUpperCase()}${iconPosition.slice(1)}`}
+            {label}
           </Button>
         ))}
       </DemoComponents>
