@@ -30,10 +30,24 @@ export interface ButtonProps
 }
 
 export interface ButtonClassNameMap {
+  color: Record<ButtonColor, `button-${ButtonColor}`>;
+  variant: Record<ButtonVariant, `button-${ButtonVariant}`>;
   size: Record<ButtonSize, `button-${ButtonSize}`>;
 }
 
 const classNameMap: ButtonClassNameMap = {
+  color: {
+    neutral: 'button-neutral',
+    primary: 'button-primary',
+    secondary: 'button-secondary',
+    error: 'button-error',
+  },
+  variant: {
+    text: 'button-text',
+    tonal: 'button-tonal',
+    elevated: 'button-elevated',
+    filled: 'button-filled',
+  },
   size: {
     xs: 'button-xs',
     sm: 'button-sm',
@@ -62,20 +76,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         className={classNames(
           classes['button-root'],
-          color === 'primary'
-            ? classes['button-primary']
-            : color === 'secondary'
-            ? classes['button-secondary']
-            : color === 'error'
-            ? classes['button-error']
-            : classes['button-neutral'],
-          variant === 'filled'
-            ? classes['button-filled']
-            : variant === 'elevated'
-            ? classes['button-elevated']
-            : variant === 'text'
-            ? classes['button-text']
-            : classes['button-tonal'],
+          classes[classNameMap.color[color]],
+          classes[classNameMap.variant[variant]],
           classes[classNameMap.size[size]],
           className
         )}
