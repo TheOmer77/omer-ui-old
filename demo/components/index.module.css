@@ -15,7 +15,8 @@ h3 {
 
 h1:first-child,
 h2:first-child,
-h3:first-child {
+h3:first-child,
+.demo-description {
   margin-block-start: 0;
 }
 
@@ -41,8 +42,18 @@ h3 {
 }
 
 h3,
+.demo-description,
 .demo .demo-controls .demo-controls-label {
   color: rgba(var(--color-neutral-5), 0.85);
+}
+
+.demo-title {
+  margin-block-end: 0.5rem;
+}
+
+.demo-description {
+  font-size: 1.25rem;
+  letter-spacing: -0.025rem;
 }
 
 .demo {

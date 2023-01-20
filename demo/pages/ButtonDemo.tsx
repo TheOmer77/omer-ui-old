@@ -6,6 +6,7 @@ import Button, {
   ButtonSize,
   ButtonVariant,
 } from 'components/Button';
+import DemoPage from '../components/DemoPage';
 import Demo from '../components/Demo';
 import DemoComponents from '../components/DemoComponents';
 
@@ -45,8 +46,11 @@ const ButtonDemo = () => {
     [variant, setVariant] = useState<ButtonVariant>('tonal');
 
   return (
-    <>
-      <h1>Button</h1>
+    <DemoPage
+      title='Button'
+      description={`Buttons allow users to perform actions and make choices when pressed.
+They are usually found in places like dialogs, forms and more.`}
+    >
       <Demo
         controls={[
           {
@@ -186,7 +190,7 @@ const ButtonDemo = () => {
           </Button>
         ))}
       </DemoComponents>
-    </>
+    </DemoPage>
   );
 };
 
