@@ -8,8 +8,7 @@
     "plugin:react-hooks/recommended",
     "plugin:import/recommended",
     "plugin:import/typescript",
-    "plugin:jsx-a11y/recommended",
-    "prettier"
+    "plugin:jsx-a11y/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -17,10 +16,16 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "plugins": ["react", "@typescript-eslint"],
   "settings": {
     "import/parsers": { "@typescript-eslint/parser": [".ts", ".tsx"] },
-    "import/resolver": { "typescript": { "alwaysTryTypes": true } }
+    "import/ignore": ["nextra"],
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": ["./packages/*/tsconfig.json", "./docs/tsconfig.json"]
+      }
+    }
   },
   "rules": {}
 }

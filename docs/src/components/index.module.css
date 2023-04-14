@@ -1,3 +1,6 @@
+/* DISABLED STYLES FOR NOW
+TODO: Use these in nextra theme config?
+
 :root {
   color-scheme: light dark;
 }
@@ -41,7 +44,9 @@ h3 {
   font-weight: 500;
 }
 
-h3,
+*/
+
+/* h3, */
 .demo-description,
 .demo .demo-controls .demo-controls-label {
   color: rgba(var(--color-neutral-5), 0.85);
@@ -143,7 +148,7 @@ h3,
     background-color: rgb(var(--color-neutral-10));
   }
 
-  h3,
+  /* h3, */
   .demo .demo-controls .demo-controls-label {
     color: rgba(var(--color-neutral-98), 0.85);
   }
