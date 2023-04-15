@@ -9,7 +9,7 @@ export interface DemoProps {
   children: ReactNode;
 }
 
-const Demo = ({ controls, children }: DemoProps) => {
+const DocsPlayground = ({ controls, children }: DemoProps) => {
   return (
     <div className='demo'>
       <DemoControls controls={controls} />
@@ -18,4 +18,4 @@ const Demo = ({ controls, children }: DemoProps) => {
   );
 };
 
-export default Demo;
+export default DocsPlayground;

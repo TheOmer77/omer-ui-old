@@ -6,7 +6,7 @@ description: Buttons allow users to perform actions and make choices when presse
 import { Fragment, useState } from 'react';
 import { Button } from '@theomer77/omer-ui-components';
 
-import Demo from 'components/Demo';
+import DocsPlayground from 'components/DocsPlayground';
 import DemoComponents from 'components/DemoComponents';
 import AddIcon from 'assets/icons/add.svg';
 
@@ -35,7 +35,7 @@ export const buttonSizes = [
   ],
   noneDemoOption = { label: 'None', value: false };
 
-export const ButtonDemo = () => {
+export const ButtonPlayground = () => {
 const [color, setColor] = useState('neutral'),
     [icon, setIcon] = useState(false),
     [size, setSize] = useState('md'),
@@ -43,7 +43,7 @@ const [color, setColor] = useState('neutral'),
 
 return (
 
-<Demo
+<DocsPlayground
   controls={[
     {
       id: 'color',
@@ -124,11 +124,11 @@ return (
   >
     Button
   </Button>
-</Demo>
+</DocsPlayground>
 
 )};
 
-<ButtonDemo />
+<ButtonPlayground />
 
 ## Button variants & colors
 
