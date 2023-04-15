@@ -1,19 +1,25 @@
 import { ReactNode } from 'react';
 
-import { DemoControlProps } from './DocsPlaygroundControl';
-import DemoControls from './DocsPlaygroundControls';
-import DemoComponents from './DocsComponents';
+import DocsPlaygroundControls from './DocsPlaygroundControls';
+import DocsComponents from './DocsComponents';
+import type { DocsPlaygroundControlProps } from './DocsPlaygroundControl';
 
-export interface DemoProps {
-  controls: DemoControlProps[];
+export interface DocsPlaygroundOption<Value, Options extends object = object> {
+  label: string;
+  value: Value;
+  options?: Options;
+}
+
+export interface DocsPlaygroundProps {
+  controls: DocsPlaygroundControlProps[];
   children: ReactNode;
 }
 
-const DocsPlayground = ({ controls, children }: DemoProps) => {
+const DocsPlayground = ({ controls, children }: DocsPlaygroundProps) => {
   return (
     <div className='demo'>
-      <DemoControls controls={controls} />
-      <DemoComponents>{children}</DemoComponents>
+      <DocsPlaygroundControls controls={controls} />
+      <DocsComponents>{children}</DocsComponents>
     </div>
   );
 };

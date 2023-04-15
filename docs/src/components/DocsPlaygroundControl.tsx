@@ -1,12 +1,16 @@
 import { ReactNode } from 'react';
 
-export interface DemoControlProps {
+export interface DocsPlaygroundControlProps {
   id: string;
   label: string;
   component: ReactNode;
 }
 
-const DemoControl = ({ id, label, component }: DemoControlProps) => {
+const DocsPlaygroundControl = ({
+  id,
+  label,
+  component,
+}: DocsPlaygroundControlProps) => {
   return (
     <>
       <div id={`${id}-label`} className='demo-controls-label'>
@@ -19,4 +23,4 @@ const DemoControl = ({ id, label, component }: DemoControlProps) => {
   );
 };
 
-export default DemoControl;
+export default DocsPlaygroundControl;

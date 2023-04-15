@@ -1,10 +1,16 @@
-import DemoControl, { DemoControlProps } from './DocsPlaygroundControl';
+import DocsPlaygroundControl, {
+  DocsPlaygroundControlProps,
+} from './DocsPlaygroundControl';
 
-const DemoControls = ({ controls }: { controls: DemoControlProps[] }) => {
+const DocsPlaygroundControls = ({
+  controls,
+}: {
+  controls: DocsPlaygroundControlProps[];
+}) => {
   return (
     <div className='demo-controls'>
       {controls.map(control => (
-        <DemoControl
+        <DocsPlaygroundControl
           key={control.id}
           id={control.id}
           label={control.label}
@@ -15,4 +21,4 @@ const DemoControls = ({ controls }: { controls: DemoControlProps[] }) => {
   );
 };
 
-export default DemoControls;
+export default DocsPlaygroundControls;

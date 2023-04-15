@@ -33,7 +33,7 @@ export const buttonSizes = [
     { label: 'Start', value: 'start' },
     { label: 'End', value: 'end' },
   ],
-  noneDemoOption = { label: 'None', value: false };
+  nonePlaygroundOption = { label: 'None', value: false };
 
 export const ButtonPlayground = () => {
 const [color, setColor] = useState('neutral'),
@@ -101,15 +101,17 @@ return (
       label: 'Icon',
       component: (
         <>
-          {[noneDemoOption, ...buttonIconPositions].map(({ label, value }) => (
-            <Button
-              key={value || 'none'}
-              color={icon === value ? 'primary' : 'neutral'}
-              onClick={() => setIcon(value)}
-            >
-              {label}
-            </Button>
-          ))}
+          {[nonePlaygroundOption, ...buttonIconPositions].map(
+            ({ label, value }) => (
+              <Button
+                key={value || 'none'}
+                color={icon === value ? 'primary' : 'neutral'}
+                onClick={() => setIcon(value)}
+              >
+                {label}
+              </Button>
+            )
+          )}
         </>
       ),
     },
