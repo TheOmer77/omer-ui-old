@@ -8,6 +8,10 @@ A React component library for use in my personal projects. This readme is probab
 
 ## Scripts
 
+## `npm run dev`
+
+Runs both the `build:watch` & `docs` scripts at once, building the library in watch mode while also running the docs site at [http://localhost:3000](http://localhost:3000).
+
 ### `npm run build`
 
 Builds the library to the `dist` folder, within the package directory.

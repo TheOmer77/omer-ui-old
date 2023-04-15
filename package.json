@@ -11,9 +11,13 @@
   "scripts": {
     "build": "npm --prefix ./packages/omer-ui-components run build",
     "build:watch": "npm --prefix ./packages/omer-ui-components run build:watch",
+    "dev": "concurrently \"npm run build:watch\" \"npm run docs\"",
     "docs": "npm --prefix ./docs run dev",
     "docs:build": "npm --prefix ./docs run build",
     "format": "prettier --write .",
     "test": "npm --prefix ./packages/omer-ui-components run test"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1"
   }
 }
