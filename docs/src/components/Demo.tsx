@@ -4,8 +4,6 @@ import { DemoControlProps } from './DemoControl';
 import DemoControls from './DemoControls';
 import DemoComponents from './DemoComponents';
 
-import classes from './index.module.css';
-
 export interface DemoProps {
   controls: DemoControlProps[];
   children: ReactNode;
@@ -13,7 +11,7 @@ export interface DemoProps {
 
 const Demo = ({ controls, children }: DemoProps) => {
   return (
-    <div className={classes.demo}>
+    <div className='demo'>
       <DemoControls controls={controls} />
       <DemoComponents>{children}</DemoComponents>
     </div>

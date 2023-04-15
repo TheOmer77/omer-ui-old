@@ -1,7 +1,5 @@
 import { ReactNode } from 'react';
 
-import classes from './index.module.css';
-
 export interface DemoControlProps {
   id: string;
   label: string;
@@ -11,10 +9,10 @@ export interface DemoControlProps {
 const DemoControl = ({ id, label, component }: DemoControlProps) => {
   return (
     <>
-      <div id={`${id}-label`} className={classes['demo-controls-label']}>
+      <div id={`${id}-label`} className='demo-controls-label'>
         {label}
       </div>
-      <div id={`${id}`} className={classes['demo-controls-row']}>
+      <div id={`${id}`} className='demo-controls-row'>
         {component}
       </div>
     </>

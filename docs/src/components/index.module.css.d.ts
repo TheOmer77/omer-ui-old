@@ -5,7 +5,7 @@ declare const styles: {
   readonly 'demo-controls-label': string;
   readonly 'demo-controls-row': string;
   readonly 'demo-controls': string;
-  readonly 'demo-description': string;
-  readonly 'demo-title': string;
+  readonly 'docs-description': string;
+  readonly 'docs-title': string;
 };
 export = styles;
