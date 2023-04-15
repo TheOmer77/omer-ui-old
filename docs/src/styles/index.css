@@ -144,6 +144,10 @@
 }
 
 @media (prefers-color-scheme: dark) {
+  .nextra-content * {
+    color: rgba(var(--color-neutral-98));
+  }
+
   .docs-playground .docs-playground-controls {
     background-color: rgb(var(--color-neutral-10));
   }
