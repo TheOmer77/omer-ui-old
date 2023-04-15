@@ -7,7 +7,7 @@ import { Fragment, useState } from 'react';
 import { Button } from '@theomer77/omer-ui-components';
 
 import DocsPlayground from 'components/DocsPlayground';
-import DemoComponents from 'components/DemoComponents';
+import DocsComponents from 'components/DocsComponents';
 import AddIcon from 'assets/icons/add.svg';
 
 export const buttonSizes = [
@@ -136,7 +136,7 @@ return (
 
 <Fragment key={variant}>
   <h3>{variantLabel}</h3>
-  <DemoComponents>
+  <DocsComponents>
     {buttonColors.map(({ label: colorLabel, value: color }) => (
       <Button
         key={`${variant}-${color}`}
@@ -147,23 +147,23 @@ return (
         {colorLabel}
       </Button>
     ))}
-  </DemoComponents>
+  </DocsComponents>
 </Fragment>
 ))}
 
 ## Button sizes
 
-<DemoComponents>
+<DocsComponents>
   {buttonSizes.map(({ label, value }) => (
     <Button key={value} size={value} id={`demo-btn-${value}`}>
       {label}
     </Button>
   ))}
-</DemoComponents>
+</DocsComponents>
 
 ## Disabled buttons
 
-<DemoComponents>
+<DocsComponents>
   {buttonVariants.map(({ value: variant }) =>
     buttonColors.slice(0, 2).map(({ value: color }) => (
       <Button
@@ -177,11 +177,11 @@ return (
       </Button>
     ))
   )}
-</DemoComponents>
+</DocsComponents>
 
 ## Buttons with icons
 
-<DemoComponents>
+<DocsComponents>
   {buttonIconPositions.map(({ label, value }) => (
     <Button
       key={value}
@@ -192,4 +192,4 @@ return (
       {label}
     </Button>
   ))}
-</DemoComponents>
+</DocsComponents>
