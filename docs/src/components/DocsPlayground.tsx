@@ -17,7 +17,7 @@ export interface DocsPlaygroundProps {
 
 const DocsPlayground = ({ controls, children }: DocsPlaygroundProps) => {
   return (
-    <div className='demo'>
+    <div className='docs-playground'>
       <DocsPlaygroundControls controls={controls} />
       <DocsComponents>{children}</DocsComponents>
     </div>

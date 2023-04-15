@@ -13,10 +13,10 @@ const DocsPlaygroundControl = ({
 }: DocsPlaygroundControlProps) => {
   return (
     <>
-      <div id={`${id}-label`} className='demo-controls-label'>
+      <div id={`${id}-label`} className='docs-playground-controls-label'>
         {label}
       </div>
-      <div id={`${id}`} className='demo-controls-row'>
+      <div id={`${id}`} className='docs-playground-controls-row'>
         {component}
       </div>
     </>

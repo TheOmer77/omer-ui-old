@@ -46,7 +46,7 @@
 
 .nextra-content h3,
 .docs-description,
-.demo .demo-controls .demo-controls-label {
+.docs-playground .docs-playground-controls .docs-playground-controls-label {
   color: rgba(var(--color-neutral-5), 0.85);
 }
 
@@ -59,7 +59,7 @@
   letter-spacing: -0.025rem;
 }
 
-.demo {
+.docs-playground {
   display: flex;
   flex-direction: column-reverse;
   width: 100%;
@@ -67,43 +67,45 @@
   gap: 1rem;
 }
 
-.demo .demo-controls {
+.docs-playground .docs-playground-controls {
   height: calc(100vh - 35rem);
   overflow-y: auto;
   background-color: rgb(var(--color-neutral-95));
   padding: 1rem;
 }
 
-.demo .demo-controls .demo-controls-label {
+.docs-playground .docs-playground-controls .docs-playground-controls-label {
   margin-bottom: 0.25rem;
   font-size: 0.875rem;
   user-select: none;
 }
 
-.demo .demo-controls .demo-controls-label:not(:first-of-type) {
+.docs-playground
+  .docs-playground-controls
+  .docs-playground-controls-label:not(:first-of-type) {
   margin-top: 0.5rem;
 }
 
-.demo .demo-controls,
-.demo-components {
+.docs-playground .docs-playground-controls,
+.docs-components {
   border-radius: 1rem;
   box-sizing: border-box;
 }
 
-.demo .demo-controls .demo-controls-row,
-.demo-components {
+.docs-playground .docs-playground-controls .docs-playground-controls-row,
+.docs-components {
   display: flex;
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.demo .demo-controls .demo-controls-row {
+.docs-playground .docs-playground-controls .docs-playground-controls-row {
   gap: 0.5rem;
   flex-wrap: wrap;
 }
 
-.demo-components {
+.docs-components {
   gap: 1rem;
   padding: 1rem;
   border: 1px solid rgb(var(--color-neutral-85));
@@ -112,11 +114,11 @@
   align-items: center;
 }
 
-.demo .demo-components {
+.docs-playground .docs-components {
   height: 20rem;
 }
 
-.demo .demo-column {
+.docs-playground .docs-playground-column {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -125,33 +127,33 @@
 }
 
 @media (min-width: 1024px) {
-  .demo {
+  .docs-playground {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .demo .demo-controls {
+  .docs-playground .docs-playground-controls {
     height: 20rem;
   }
 }
 
 @media (min-width: 1440px) {
-  .demo {
+  .docs-playground {
     grid-template-columns: 1fr 2fr;
   }
 }
 
 @media (prefers-color-scheme: dark) {
-  .demo .demo-controls {
+  .docs-playground .docs-playground-controls {
     background-color: rgb(var(--color-neutral-10));
   }
 
   .nextra-content h3,
-  .demo .demo-controls .demo-controls-label {
+  .docs-playground .docs-playground-controls .docs-playground-controls-label {
     color: rgba(var(--color-neutral-98), 0.85);
   }
 
-  .demo-components {
+  .docs-components {
     border: 1px solid rgb(var(--color-neutral-20));
   }
 }

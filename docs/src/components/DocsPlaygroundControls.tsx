@@ -8,7 +8,7 @@ const DocsPlaygroundControls = ({
   controls: DocsPlaygroundControlProps[];
 }) => {
   return (
-    <div className='demo-controls'>
+    <div className='docs-playground-controls'>
       {controls.map(control => (
         <DocsPlaygroundControl
           key={control.id}

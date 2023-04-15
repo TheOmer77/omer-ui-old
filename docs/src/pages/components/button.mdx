@@ -142,7 +142,7 @@ return (
     {buttonColors.map(({ label: colorLabel, value: color }) => (
       <Button
         key={`${variant}-${color}`}
-        id={`demo-btn-${variant}-${color}`}
+        id={`docs-btn-${variant}-${color}`}
         variant={variant}
         color={color}
       >
@@ -157,7 +157,7 @@ return (
 
 <DocsComponents>
   {buttonSizes.map(({ label, value }) => (
-    <Button key={value} size={value} id={`demo-btn-${value}`}>
+    <Button key={value} size={value} id={`docs-btn-${value}`}>
       {label}
     </Button>
   ))}
@@ -170,7 +170,7 @@ return (
     buttonColors.slice(0, 2).map(({ value: color }) => (
       <Button
         key={`${variant}-${color}`}
-        id={`demo-btn-${variant}-${color}-disabled`}
+        id={`docs-btn-${variant}-${color}-disabled`}
         variant={variant}
         color={color}
         disabled
@@ -187,7 +187,7 @@ return (
   {buttonIconPositions.map(({ label, value }) => (
     <Button
       key={value}
-      id={`demo-btn-icon-${value}`}
+      id={`docs-btn-icon-${value}`}
       icon={<AddIcon />}
       iconPosition={value}
     >
