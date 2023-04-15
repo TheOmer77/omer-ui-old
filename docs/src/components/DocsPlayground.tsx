@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
-import { DemoControlProps } from './DemoControl';
-import DemoControls from './DemoControls';
+import { DemoControlProps } from './DocsPlaygroundControl';
+import DemoControls from './DocsPlaygroundControls';
 import DemoComponents from './DemoComponents';
 
 export interface DemoProps {

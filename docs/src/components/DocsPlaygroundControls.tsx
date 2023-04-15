@@ -1,4 +1,4 @@
-import DemoControl, { DemoControlProps } from './DemoControl';
+import DemoControl, { DemoControlProps } from './DocsPlaygroundControl';
 
 const DemoControls = ({ controls }: { controls: DemoControlProps[] }) => {
   return (
