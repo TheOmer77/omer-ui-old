@@ -2,7 +2,7 @@
   color-scheme: light dark;
 }
 
-.nextra-content * {
+.nextra-content main > * {
   color: rgba(var(--color-neutral-5));
 }
 
@@ -144,7 +144,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .nextra-content * {
+  .nextra-content main > * {
     color: rgba(var(--color-neutral-98));
   }
 
