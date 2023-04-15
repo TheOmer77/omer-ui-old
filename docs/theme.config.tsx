@@ -1,7 +1,6 @@
 import type { DocsThemeConfig } from 'nextra-theme-docs';
 
-import DocsPage from 'components/DocsPage';
-import DocsHead from 'components/DocsHead';
+import { DocsHead, DocsPage } from 'components/docs';
 import { H1, H2, H3 } from 'components/MdxComponents';
 
 const config: DocsThemeConfig = {
