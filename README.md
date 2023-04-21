@@ -2,7 +2,7 @@
 
 A React component library for use in my personal projects. This readme is probably bad & I will change it later.
 
-- The package itself is written in [TypeScript](https://www.typescriptlang.org/), uses [Rollup](https://rollupjs.org/) as a bundler and [Jest](https://jestjs.io/) for testing. It was originally created by following [this tutorial](https://youtu.be/XHQi5a0TmMc).
+- The package itself is written in [TypeScript](https://www.typescriptlang.org/), uses [Rollup](https://rollupjs.org/) as a bundler and [Jest](https://jestjs.io/) for testing.
 - The documentation site is powered by [Next.js](https://nextjs.org/) and [Nextra](https://nextra.site/).
 - Additionally, [Prettier](https://prettier.io/) and [ESLint](https://eslint.org/) are included.
 
