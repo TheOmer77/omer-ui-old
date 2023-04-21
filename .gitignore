@@ -1,36 +1,35 @@
-# dependencies
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dependencies
 node_modules/
 .pnp
 .pnp.js
 
-# testing
-coverage/
-
-# next.js
-.next/
-out/
-
-# production
-build/
+# Production
 dist/
 *.tgz
 
-# misc
+# Testing
+coverage/
+
+# Next.js
+.next/
+out/
+
+# Misc
 .DS_Store
 *.pem
 
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
 
-# local env files
-.env*.local
-
-# vercel
-.vercel
-
-# typescript
+# TypeScript
 *.tsbuildinfo
 next-env.d.ts
