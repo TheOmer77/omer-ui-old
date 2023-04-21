@@ -1,0 +1,17 @@
+---
+title: Components
+---
+
+import Link from 'next/link';
+import { Button } from '@theomer77/omer-ui-components';
+
+export const pages = [{ label: 'Button', href: '/button' }];
+
+<div className='VERY-TEMPORARY_DOCS_LIST'>
+{pages.map(({label, href}) => (
+
+<Link key={href} href={['/components', href].join('')}>
+  <Button color='primary'>{label}</Button>
+</Link>
+))}
+</div>

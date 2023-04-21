@@ -1,0 +1,39 @@
+{
+  "name": "@theomer77/omer-ui-components",
+  "version": "0.1.0",
+  "description": "Testing test test React component library!!!",
+  "repository": {
+    "url": "https://github.com/TheOmer77/template-react-component-lib.git"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build:watch": "rollup -c rollup.config.mjs -w",
+    "build": "rollup -c rollup.config.mjs",
+    "lint": "eslint --max-warnings=0 src",
+    "postpack": "clean-package restore",
+    "prepack": "clean-package",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "TheOmer77",
+  "license": "ISC",
+  "dependencies": {
+    "classnames": "^2.3.2"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "clean-package": {
+    "indent": 2,
+    "remove": [
+      "clean-package",
+      "scripts"
+    ]
+  }
+}

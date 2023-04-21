@@ -1,0 +1,196 @@
+---
+title: Button
+description: Buttons allow users to perform actions and make choices when pressed. They are usually found in places like dialogs, forms and more.
+---
+
+import { Fragment, useState } from 'react';
+import { Button } from '@theomer77/omer-ui-components';
+
+import { DocsComponents, DocsPlayground } from 'components/docs';
+import { Add as AddIcon } from 'components/icons';
+
+export const buttonSizes = [
+    { label: 'Extra small', value: 'xs' },
+    { label: 'Small', value: 'sm' },
+    { label: 'Medium', value: 'md' },
+    { label: 'Large', value: 'lg' },
+    { label: 'Extra large', value: 'xl' },
+  ],
+  buttonVariants = [
+    { label: 'Text', value: 'text' },
+    { label: 'Tonal', value: 'tonal' },
+    { label: 'Elevated', value: 'elevated' },
+    { label: 'Filled', value: 'filled' },
+  ],
+  buttonColors = [
+    { label: 'Neutral', value: 'neutral' },
+    { label: 'Primary', value: 'primary' },
+    { label: 'Secondary', value: 'secondary' },
+    { label: 'Error', value: 'error' },
+  ],
+  buttonIconPositions = [
+    { label: 'Start', value: 'start' },
+    { label: 'End', value: 'end' },
+  ],
+  nonePlaygroundOption = { label: 'None', value: false };
+
+export const ButtonPlayground = () => {
+const [color, setColor] = useState('neutral'),
+    [icon, setIcon] = useState(false),
+    [size, setSize] = useState('md'),
+    [variant, setVariant] = useState('tonal');
+
+return (
+
+<DocsPlayground
+  controls={[
+    {
+      id: 'color',
+      label: 'Color',
+      component: (
+        <>
+          {buttonColors.map(({ label, value }) => (
+            <Button
+              key={value}
+              color={color === value ? 'primary' : 'neutral'}
+              onClick={() => setColor(value)}
+            >
+              {label}
+            </Button>
+          ))}
+        </>
+      ),
+    },
+    {
+      id: 'variant',
+      label: 'Variant',
+      component: (
+        <>
+          {buttonVariants.map(({ label, value }) => (
+            <Button
+              key={value}
+              color={variant === value ? 'primary' : 'neutral'}
+              onClick={() => setVariant(value)}
+            >
+              {label}
+            </Button>
+          ))}
+        </>
+      ),
+    },
+    {
+      id: 'size',
+      label: 'Size',
+      component: (
+        <>
+          {buttonSizes.map(({ label, value }) => (
+            <Button
+              key={value}
+              color={size === value ? 'primary' : 'neutral'}
+              onClick={() => setSize(value)}
+            >
+              {label}
+            </Button>
+          ))}
+        </>
+      ),
+    },
+    {
+      id: 'icon',
+      label: 'Icon',
+      component: (
+        <>
+          {[nonePlaygroundOption, ...buttonIconPositions].map(
+            ({ label, value }) => (
+              <Button
+                key={value || 'none'}
+                color={icon === value ? 'primary' : 'neutral'}
+                onClick={() => setIcon(value)}
+              >
+                {label}
+              </Button>
+            )
+          )}
+        </>
+      ),
+    },
+  ]}
+>
+  <Button
+    variant={variant}
+    color={color}
+    size={size}
+    icon={icon && <AddIcon />}
+    {...(icon ? { iconPosition: icon } : {})}
+  >
+    Button
+  </Button>
+</DocsPlayground>
+
+)};
+
+<ButtonPlayground />
+
+## Button variants & colors
+
+{buttonVariants.map(({ label: variantLabel, value: variant }) => (
+
+<Fragment key={variant}>
+  <h3>{variantLabel}</h3>
+  <DocsComponents>
+    {buttonColors.map(({ label: colorLabel, value: color }) => (
+      <Button
+        key={`${variant}-${color}`}
+        id={`docs-btn-${variant}-${color}`}
+        variant={variant}
+        color={color}
+      >
+        {colorLabel}
+      </Button>
+    ))}
+  </DocsComponents>
+</Fragment>
+))}
+
+## Button sizes
+
+<DocsComponents>
+  {buttonSizes.map(({ label, value }) => (
+    <Button key={value} size={value} id={`docs-btn-${value}`}>
+      {label}
+    </Button>
+  ))}
+</DocsComponents>
+
+## Disabled buttons
+
+<DocsComponents>
+  {buttonVariants.map(({ value: variant }) =>
+    buttonColors.slice(0, 2).map(({ value: color }) => (
+      <Button
+        key={`${variant}-${color}`}
+        id={`docs-btn-${variant}-${color}-disabled`}
+        variant={variant}
+        color={color}
+        disabled
+      >
+        Disabled
+      </Button>
+    ))
+  )}
+</DocsComponents>
+
+## Buttons with icons
+
+<DocsComponents>
+  {buttonIconPositions.map(({ label, value }) => (
+    <Button
+      key={value}
+      id={`docs-btn-icon-${value}`}
+      icon={<AddIcon />}
+      iconPosition={value}
+    >
+      {label}
+    </Button>
+  ))}
+</DocsComponents>

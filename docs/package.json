@@ -1,0 +1,21 @@
+{
+  "name": "@theomer77/omer-ui-docs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export -o dist",
+    "start": "next start",
+    "lint": "eslint --max-warnings=0 src"
+  },
+  "dependencies": {
+    "@fontsource/figtree": "^4.5.3",
+    "@svgr/webpack": "^7.0.0",
+    "@theomer77/omer-ui-components": "*",
+    "next": "^13.3.0",
+    "nextra": "^2.4.0",
+    "nextra-theme-docs": "^2.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
