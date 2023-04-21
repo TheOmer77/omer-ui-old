@@ -28,9 +28,17 @@ Runs the documentation site at [http://localhost:3000](http://localhost:3000). T
 
 Builds the docs site as static files to the `dist` folder within `docs`.
 
+### `npm run docs:lint`
+
+Lints all docs files using ESLint.
+
 ### `npm run format`
 
 Formats all files using Prettier.
+
+### `npm run lint`
+
+Lints all packages files using ESLint.
 
 ### `npm test`
 
