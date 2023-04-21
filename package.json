@@ -14,7 +14,9 @@
     "dev": "concurrently \"npm run build:watch\" \"npm run docs\"",
     "docs": "npm --prefix ./docs run dev",
     "docs:build": "npm --prefix ./docs run build",
+    "docs:lint": "npm --prefix ./docs run lint",
     "format": "prettier --write .",
+    "lint": "npm --prefix ./packages/omer-ui-components run lint",
     "test": "npm --prefix ./packages/omer-ui-components run test"
   },
   "devDependencies": {

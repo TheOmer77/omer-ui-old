@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build && next export -o dist",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint --max-warnings=0 src"
   },
   "dependencies": {
     "@fontsource/figtree": "^4.5.3",

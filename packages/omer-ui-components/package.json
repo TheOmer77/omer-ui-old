@@ -14,6 +14,7 @@
   "scripts": {
     "build:watch": "rollup -c rollup.config.mjs -w",
     "build": "rollup -c rollup.config.mjs",
+    "lint": "eslint --max-warnings=0 src",
     "postpack": "clean-package restore",
     "prepack": "clean-package",
     "test": "jest"
