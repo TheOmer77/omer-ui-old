@@ -11,7 +11,7 @@
   "scripts": {
     "build": "npm --prefix ./packages/omer-ui-components run build",
     "build:watch": "npm --prefix ./packages/omer-ui-components run build:watch",
-    "dev": "concurrently \"npm run build:watch\" \"npm run docs\"",
+    "dev": "concurrently \"npm run build:watch -s\" \"npm run docs -s\"",
     "docs": "npm --prefix ./docs run dev",
     "docs:build": "npm --prefix ./docs run build",
     "docs:lint": "npm --prefix ./docs run lint",
